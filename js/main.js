@@ -16,13 +16,14 @@ window.onload = function() {
   body.classList.remove('noscroll')
   body.classList.add('loading')
   setTimeout(function(){body.classList.add('loaded')},1500)
-  setTimeout(function(){document.querySelector('.preloader').style.display = 'none';},2300)
+  setTimeout(function(){document.querySelector('.preloader').style.display = 'none';},2400)
   //PRELOADER
   var swiper1 = new Swiper('.news-slider', {
     loop:true,
     speed:1000,
     autoplay: 4000,
-    parallax: true,
+    // virtualTranslate:true,
+    effect: 'fade',
     onTransitionStart: function(swiper) {
       $('.swiper-slide').removeClass('mask')
     },
@@ -30,70 +31,89 @@ window.onload = function() {
       setTimeout(function(){$('.swiper-slide-active').addClass('mask')},2000);
     }
   });
-  heightSlider();
+  if(document.querySelector('.case-slider') != undefined){
+    heightSlider();
+    document.querySelector('.case-slider').onmouseover = function() {
+      swiper2.stopAutoplay();
+    }
+    document.querySelector('.case-slider').onmouseout = function() {
+      swiper2.stopAutoplay();
+    }
+    document.querySelector('.news-slider').onmouseover = function() {
+      swiper1.stopAutoplay();
+    }
+    document.querySelector('.news-slider').onmouseout = function() {
+      swiper1.startAutoplay();
+    }
+  }
   setTimeout(function(){
     swiper2 = new Swiper('.case-slider', {
       loop:true,
       speed:1000,
       autoplay: 4000,
-      parallax: true,
       direction: 'vertical',
       autoHeight:false,
-      // height:maxHT
+      // virtualTranslate:true,
     });
   },400);
-  document.querySelector('.case-slider').onmouseover = function() {
-    swiper2.stopAutoplay();
-  }
-  document.querySelector('.case-slider').onmouseout = function() {
-    swiper2.stopAutoplay();
-  }
-  document.querySelector('.news-slider').onmouseover = function() {
-    swiper1.stopAutoplay();
-  }
-  document.querySelector('.news-slider').onmouseout = function() {
-    swiper1.startAutoplay();
-  }
-  var newsHeight = window.innerHeight - document.querySelector('.news-window-head').clientHeight - 30;
-  for (var i =0 ;i < document.querySelectorAll('.news-window-body-over').length; i++) {
-    document.querySelectorAll('.news-window-body-over')[i].style.maxHeight = newsHeight + 'px';
+  var swiper3 = new Swiper('.clients-slider', {
+    loop:true,
+    speed:1000,
+    autoplay: 2000,
+  });
+
+  if(document.querySelector('.news-window') != undefined){
+    var newsHeight = window.innerHeight - document.querySelector('.news-window-head').clientHeight - 60;
+    for (var i =0 ;i < document.querySelectorAll('.news-window-body-over').length; i++) {
+      document.querySelectorAll('.news-window-body-over')[i].style.maxHeight = newsHeight + 'px';
+    }
   }
   // animate map
-  if(isMobile == false) {
-    document.querySelector('.maps').style.opacity = '1';
-    var tl = new TimelineMax();
-    var elPath = document.querySelectorAll(".map-svg path");
-    var xPos = document.querySelector('.map-svg').clientWidth + 100;
-    var YPos = Math.random()*(document.querySelector('.map-svg').clientHeight/2 - document.querySelector('.map-svg').clientWidth);
-    tl.staggerFrom(elPath, 0.4, {x: xPos, y:YPos, repeat:1,ease: Circ.easeOut,} , 0.01);
-  }else {
-    document.querySelector('.maps').style.opacity = '1';
+  if(document.querySelector('.maps') != undefined){
+    if(isMobile == false) {
+      document.querySelector('.maps').style.opacity = '1';
+      var tl = new TimelineMax();
+      var elPath = document.querySelectorAll(".map-svg path");
+      var xPos = document.querySelector('.map-svg').clientWidth + 100;
+      var YPos = Math.random()*(document.querySelector('.map-svg').clientHeight/2 - document.querySelector('.map-svg').clientWidth);
+      tl.staggerFrom(elPath, 0.4, {x: xPos, y:YPos, repeat:1,ease: Circ.easeOut}, 0.01);
+    }else {
+      document.querySelector('.maps').style.opacity = '1';
+    }
+    var t2 = new TimelineMax({
+      repeat:-1, 
+      yoyo:true
+    });
+    t2
+    .staggerTo("#map_svg stop", 4, {
+      stopColor:'#2a3ef2',
+      cycle:{
+        stopColor: ['#ffc40c', '#2a3ef2','#ffc40c', '#2a3ef2']  
+      }
+    }, 0.7, 0)
+    .progress(1).progress(0);
   }
   // animate map
   sectTop = document.querySelector('.section-nav').offsetTop;
-  document.querySelector('.veiw-introd').onclick = function(){
-    var block_ = document.querySelectorAll('.text-left .section-product-list');
-    if(block_[0].classList.contains("active")) {
-      block_[0].classList.remove("active");
-      setTimeout(function(){block_[0].classList.remove("visible")},600);
-      setTimeout(function(){block_[1].classList.add("visible")},700);
-      setTimeout(function(){block_[1].classList.add("active")},800);
-      this.innerHTML = 'View by Services'
-    }else {
-      block_[1].classList.remove("active");
-      setTimeout(function(){block_[1].classList.remove("visible")},600);
-      setTimeout(function(){block_[0].classList.add("visible")},700);
-      setTimeout(function(){block_[0].classList.add("active")},800);
-      this.innerHTML = 'View by Industries'
+  if(document.querySelector('.veiw-introd') != undefined){
+    document.querySelector('.veiw-introd').onclick = function(){
+      var block_ = document.querySelectorAll('.text-left .section-product-list');
+      if(block_[0].classList.contains("active")) {
+        block_[0].classList.remove("active");
+        setTimeout(function(){block_[0].classList.remove("visible")},600);
+        setTimeout(function(){block_[1].classList.add("visible")},700);
+        setTimeout(function(){block_[1].classList.add("active")},800);
+        this.innerHTML = 'View by Services'
+      }else {
+        block_[1].classList.remove("active");
+        setTimeout(function(){block_[1].classList.remove("visible")},600);
+        setTimeout(function(){block_[0].classList.add("visible")},700);
+        setTimeout(function(){block_[0].classList.add("active")},800);
+        this.innerHTML = 'View by Industries'
+      }
+      return false;
     }
-    return false;
   }
-  document.getElementById('file').onchange = function(){
-    document.querySelector('.name-file').innerHTML = this.value.replace(/\\/g, '/').replace(/.*\//, '');
-  };
-  document.getElementById('file2').onchange = function(){
-    document.querySelector('.name-file-2').innerHTML = this.value.replace(/\\/g, '/').replace(/.*\//, '');
-  };
   var idActiveNews = window.location.hash;
   if (idActiveNews.length > 1){
     setTimeout(function(){
@@ -104,15 +124,12 @@ window.onload = function() {
       document.querySelector('.news-window[data-news="' + idActiveNews +'"]').classList.add('visible');
     },1800);
   }
-  // document.querySelector('.drop').onmouseover = function(){
-  //   var offLeftDrop = document.querySelector('.drop').offsetLeft;
-  //   document.querySelector('.drop-box').style.left = offLeftDrop + 'px';
-  //   // document.querySelector('.drop-box').classList.add('visible');
-  // };
 }
 window.onresize = function() {
-  swiper2.destroy(false,true);
-  heightSlider();
+  if(document.querySelector('.case-slider') != undefined){
+    swiper2.destroy(false,true);
+    heightSlider();
+  }
   setTimeout(function(){
     swiper2 = new Swiper('.case-slider', {
       loop:true,
@@ -123,9 +140,11 @@ window.onresize = function() {
       autoHeight:false,
     });
   },300)
-  var newsHeight = window.innerHeight - document.querySelector('.news-window-head').clientHeight - 30;
-  for (var i =0 ;i < document.querySelectorAll('.news-window-body-over').length; i++) {
-    document.querySelectorAll('.news-window-body-over')[i].style.maxHeight = newsHeight + 'px';
+  if(document.querySelector('.news-window') != undefined){
+    var newsHeight = window.innerHeight - document.querySelector('.news-window-head').clientHeight - 60;
+    for (var i =0 ;i < document.querySelectorAll('.news-window-body-over').length; i++) {
+      document.querySelectorAll('.news-window-body-over')[i].style.maxHeight = newsHeight + 'px';
+    }
   }
 }
 window.onscroll = function() {
@@ -135,6 +154,13 @@ window.onscroll = function() {
       document.querySelector('.section-nav-fixed').classList.add('visible');
     }else {
       document.querySelector('.section-nav-fixed').classList.remove('visible');
+    }
+  }
+  if(document.querySelector('.nav-brd') != undefined){
+    if (scrollTop > document.querySelector('.section-top').clientHeight) {
+      document.querySelector('.nav-brd').classList.add('visible')
+    }else {
+      document.querySelector('.nav-brd').classList.remove('visible')
     }
   }
 }
@@ -167,7 +193,7 @@ $(document).ready(function() {
     $('.js_to_scroll').on('click',function(){
       var  offTopSec = document.querySelector('.section-product-and-service').offsetTop;
       $('body,html').animate({scrollTop: offTopSec},500);
-      return false
+      // return false
     });
   }
   $('.js_client_more').on('click',function(){
@@ -198,16 +224,6 @@ $(document).ready(function() {
       })
     },300);
   });
-  // $(window).load(function(){
-  //   var idActiveNews = window.location.hash;
-  //   if (idActiveNews.length > 1){
-  //     setTimeout(function(){
-  //       $('body').addClass('noscroll');
-  //       $('.overlay').addClass('visible');
-  //     },2000)
-  //     setTimeout(function(){$('.news-window[data-news='+ idActiveNews +']').addClass('visible')},2300);
-  //   }
-  // });
   $('.js_close_news').on('click',function(){
     var offTOP = $(document).scrollTop();
     window.location.hash = '';
@@ -223,13 +239,13 @@ $(document).ready(function() {
   })
   $(document).on('blur','.input-field',function(){
     var lengthWord = $(this).val();
-    if(lengthWord.length > 1){
+    if(lengthWord.length >= 1){
       $(this).parent().find('label').addClass('active');
     } else {
       $(this).parent().find('label').removeClass('active');
     }
   });
-  $('input, textarea').placeholder();
+  // $('input, textarea').placeholder();
   // modal
   $(".modal").on("show.bs.modal", function(){
     var $bodyWidth = window.innerWidth - document.body.clientWidth;
@@ -243,8 +259,18 @@ $(document).ready(function() {
   });
   // modal
   // mask
-  // $('input[type="tel"]').mask("+9(999)999 99 99"); 
-  $('input[type="tel"]').inputmask("+9(999)999 99 99", { clearMaskOnLostFocus: false });  
+  $('input[type="tel"]').intlTelInput({
+    nationalMode: false,
+    preventInvalidDialCodes: true,
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+        var countryCode = (resp && resp.country) ? resp.country : "";
+        callback(countryCode);
+        
+      });
+    }
+  });
   // mask
   // validate form
   $('.js_validate button[type="submit"]').on("click", function(e){
@@ -257,8 +283,76 @@ $(document).ready(function() {
     return validate($(this).parent(".js_validate"));
   }); 
   // switch text
+  if (isMobile == false) {
+    setTimeout(function(){
+      var $quotes = $('.section-top .quote'),
+          opts = { fadeTime: 2000, dwellTime: 8000 },
+          shuffle,
+          fadeInQuote,
+          fadeOutQuote,
+          switchTo,
+          active,
+          next = 0,
+          last = 1;
+      shuffle = function(o){
+        for(var j, x, i = o.length; i; j = parseInt(Math.random() * 
+            Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+      }; 
+      fadeInQuote = function (q) {
+        var letters = shuffle( $('[class*="char"]', $quotes[q]) );
+        $('.section-top-info.active').fadeOut(300);
+        $('.quote').removeClass('visible');
+        $($quotes[q]).show();
+        setTimeout(function(){
+          $($quotes[q]).addClass('visible');
+          // $('.section-top-info.active').remove()
+        },500)
+        $.each( letters, function (i, l) {
+          setTimeout( 
+            function () { $(l).animate({opacity: 1}, 100 ); }, 
+            ( (opts.fadeTime/2) / letters.length * i ) + (opts.fadeTime/2) 
+          );
+        });
+      };
+      fadeOutQuote = function (q) {
+        var letters = shuffle( $('[class*="char"]', $quotes[q]) );
+        $.each(letters, function (i, l) {
+          setTimeout(
+            function () { 
+              $(l).animate({opacity: 0}, 100 ); 
+            }, 
+            ( (opts.fadeTime/2) / letters.length ) * i 
+          );
+        });
+        setTimeout( function () { 
+          $($quotes[q]).hide(); }, 
+          opts.fadeTime/2
+        );
+      };
+
+      switchTo = function ( to ) {
+        var old = active;
+        fadeInQuote(to);
+        fadeOutQuote(old);
+        active = to;
+      };
+      $quotes.each( function (i, quote) {
+        $(quote).hide();
+        $(quote)
+        .children('p').lettering('lines')
+        .children('[class*=line]').lettering();
+      });
+
+      switchTo(next);
+      setInterval( function () {
+        next = ( active + 1 ) % $quotes.length;
+        switchTo(next);
+      }, opts.dwellTime );
+    }, 14500);
+  }else {
     var $quotes = $('.section-top .quote'),
-        opts = { fadeTime: 1000, dwellTime: 8000 },
+        opts = { fadeTime: 2000, dwellTime: 8000 },
         shuffle,
         fadeInQuote,
         fadeOutQuote,
@@ -266,20 +360,19 @@ $(document).ready(function() {
         active,
         next = 0,
         last = 1;
-    //+ Jonas Raoni Soares 
-    //@ http://jsfromhell.com/array/shuffle [v1.0]
-    shuffle = function(o){ //v1.
+    shuffle = function(o){
       for(var j, x, i = o.length; i; j = parseInt(Math.random() * 
           Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
       return o;
     }; 
-    // fancy on the way in
     fadeInQuote = function (q) {
       var letters = shuffle( $('[class*="char"]', $quotes[q]) );
+      $('.section-top-info.active').fadeOut(500);
       $('.quote').removeClass('visible');
       $($quotes[q]).show();
       setTimeout(function(){
         $($quotes[q]).addClass('visible');
+        $('.section-top-info.active').remove();
       },300)
       $.each( letters, function (i, l) {
         setTimeout( 
@@ -288,7 +381,6 @@ $(document).ready(function() {
         );
       });
     };
-    // and fancy on the way out
     fadeOutQuote = function (q) {
       var letters = shuffle( $('[class*="char"]', $quotes[q]) );
       $.each(letters, function (i, l) {
@@ -323,7 +415,213 @@ $(document).ready(function() {
       next = ( active + 1 ) % $quotes.length;
       switchTo(next);
     }, opts.dwellTime );
+  }
   // switch text
+  $('.rad-box input').on('change',function(){
+    var rad = $(this).attr('data-rad');
+    if($(this).is(":checked")) {
+      $(this).parents('.form-field').find('.rad-box label').removeClass('active');
+      $(this).parent().addClass('active');
+    }
+    if(rad == 'yes') {
+      $(this).parents('form').find('.select-field.visible .add-sel').remove();
+      $(this).parents('form').find('.select-field.visible select option:last').before('<option class="add-sel" value="Tech. support">Tech support</option>');
+    }
+    if(rad == 'no') {
+      $(this).parents('form').find('.select-field.visible .add-sel').remove();
+    }
+    $('.selectpicker').selectpicker('refresh');;
+  })
+  $('.select-other').change(function() {
+    if ($(".select-other :selected").val()!="Other") {
+      $('.form-other').hide();
+    } else {
+      $('.form-other').show();
+    }
+  });
+  // scroll navigator
+  $('.nav-brd').onePageNav();
+  // file upload
+  if($('input[type="file"]').length){
+    $(this).parents('.file').find('.news-window_close.remove-file').show();
+  }
+  var arrF = [];
+  $('input[type="file"]').on('change',function(){
+       files = this.files;
+       arrF = [];
+     if($(this).length){
+       $(this).parents('.file').find('.news-window_close.remove-file').show();
+     }
+
+    for(var a = 0; a < files.length; a++){
+      var bsp = String.fromCharCode(160);
+      arrF.push(bsp + files[a].name);
+    }
+    $(this).parents('.file-field').find('.name-file').text(arrF);
+  })
+  $('.name-file').hover(
+    function(){
+      $(this).parent().append('<span class="bl-nm"> ' + $(this).text() + '</span>')
+    },
+    function(){
+      $('.bl-nm').remove();
+    }
+  );
+  // select
+  if(isMobile == false && $('select').length) {
+    $('.selectpicker').selectpicker()
+  }
+  if( isMobile == true && $('select').length) {
+    $('.selectpicker').selectpicker('mobile');
+  }
+
+  // select
+  // modal privacy policy
+  $('.privacy-policy input').on('change',function(){
+    if ($(this).is(':checked')) {
+      $(this).parents('.privacy-policy').find('.hidden-txt').slideUp(300);
+    } else {
+      $(this).parents('.privacy-policy').find('.hidden-txt').slideDown(300);
+    }
+  })
+  // modal privacy policy
+  $('.data-form').on('change',function(){
+    var actForm = $(this).find('option:selected').attr('data-form');
+    // console.log(actForm)
+    $('.form-box').hide(400);
+    setTimeout(function(){
+      $('.form-box[data-form="'+actForm+'"]').show(400);
+    },500)
+  });
+  // star raiting
+  if($('.js_rating').length) {
+    $('.js_rating').barrating('show', {
+        theme: 'bars-movie'
+    });
+  }
+  // star raiting
+  // resize textarea
+  var txt = $('textarea'),
+    hiddenDiv = $(document.createElement('div')),
+    content = null;
+  hiddenDiv.addClass('hidden-div');
+  txt.addClass('noscroll');
+  txt.on('keyup', function() {
+    console.log(123)
+    $('hidden-div').empty();
+    $(this).after(hiddenDiv);
+      content = $(this).val();
+      content = content.replace(/\n/g, '<br>');
+      $(this).next(hiddenDiv).html(content);
+      $(this).css('height', $(this).next(hiddenDiv).height() + 50);
+  });
+  // resize textarea
+  // countTo
+  $('.count').each(function(){
+    $(this).appear(function() {
+        var $endNum = parseInt($(this).text());
+        $(this).countTo({
+            from: 0,
+            to: $endNum,
+            speed: 3000,
+            refreshInterval: 30,
+        });
+    },{accX: 0, accY: 0});
+  })
+  // animated
+  $('.animated').appear(function() {
+    var elem = $(this);
+    var animation = elem.data('animation');
+    if (!elem.hasClass('visible')) {
+      var animationDelay = elem.data('animation-delay');
+      if (animationDelay) {
+        setTimeout(function() {
+            elem.addClass(animation + " visible");
+        }, animationDelay);
+      } else {
+        elem.addClass(animation + " visible");
+      }
+    }
+  },{accX: 0, accY: -250});
+  // remove file
+  $('.js_remove_file').on('click',function(){
+    $(this).parents('.file-field').find("input").val('');
+    $(this).parents('.file-field').find(".name-file").text('file not chosen');
+    $(this).hide();
+    $('.bl-nm').remove();
+  })
+  // remove file
+  // animated
+var stylesArray = 
+  [
+    {
+      "featureType": "water",
+      "stylers": [{
+          "color": "#46d1fd"
+        }, {
+            "visibility": "on"
+        }]
+      },
+      {
+      "featureType": "landscape",
+        "stylers": [{
+            "color": "#cecece"
+        }]
+      }, {
+        "featureType": "road",
+        "stylers": [{
+            "saturation": -100,
+          }]
+      }, {
+        "featureType": "road.highway",
+        "stylers": [{
+            "visibility": "simplified"
+        }]
+      }, {
+          "featureType": "road.arterial",
+          "elementType": "labels.icon",
+          // "stylers": [{
+          //     "visibility": "off"
+          // }]
+      }, {
+          "featureType": "administrative",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+              "color": "#c3c3c3"
+          }]
+      }, {
+          "featureType": "transit",
+          "stylers": [{
+              "visibility": "off"
+          }]
+      }, {
+          "featureType": "poi",
+          "stylers": [{
+              "visibility": "off"
+          }]
+    }];
+  if($('#contact-map').length)
+    initialize()
+  // validate form
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(47.043911, 8.304395);
+    var myCenter = new google.maps.LatLng(47.043911, 8.305395);
+    var mapOptions = {
+      zoom: 15,
+      center: myCenter,
+      scrollwheel: false,
+      disableDefaultUI: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles:stylesArray
+    };
+    var map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      icon: 'images/marker.png'
+    });
+  };
+  // map google
 });
 // validate form
 function validate(form){
@@ -403,191 +701,5 @@ function validate(form){
     }
 }
 // validate form 
-/*! http://mths.be/placeholder v2.0.7 by @mathias */
-$(function(window, document, $) {
-
- // Opera Mini v7 doesn t support placeholder although its DOM seems to indicate so
- var isOperaMini = Object.prototype.toString.call(window.operamini) == '[object OperaMini]';
- var isInputSupported = 'placeholder' in document.createElement('input') && !isOperaMini;
- var isTextareaSupported = 'placeholder' in document.createElement('textarea') && !isOperaMini;
- var prototype = $.fn;
- var valHooks = $.valHooks;
- var propHooks = $.propHooks;
- var hooks;
- var placeholder;
-
- if (isInputSupported && isTextareaSupported) {
-
-  placeholder = prototype.placeholder = function() {
-   return this;
-  };
-
-  placeholder.input = placeholder.textarea = true;
-
- } else {
-
-  placeholder = prototype.placeholder = function() {
-   var $this = this;
-   $this
-    .filter((isInputSupported ? 'textarea' : ':input') + '[placeholder]')
-    .not('.placeholder')
-    .bind({
-     'focus.placeholder': clearPlaceholder,
-     'blur.placeholder': setPlaceholder
-    })
-    .data('placeholder-enabled', true)
-    .trigger('blur.placeholder');
-   return $this;
-  };
-
-  placeholder.input = isInputSupported;
-  placeholder.textarea = isTextareaSupported;
-
-  hooks = {
-   'get': function(element) {
-    var $element = $(element);
-
-    var $passwordInput = $element.data('placeholder-password');
-    if ($passwordInput) {
-     return $passwordInput[0].value;
-    }
-
-    return $element.data('placeholder-enabled') && $element.hasClass('placeholder') ? '' : element.value;
-   },
-   'set': function(element, value) {
-    var $element = $(element);
-
-    var $passwordInput = $element.data('placeholder-password');
-    if ($passwordInput) {
-     return $passwordInput[0].value = value;
-    }
-
-    if (!$element.data('placeholder-enabled')) {
-     return element.value = value;
-    }
-    if (value == '') {
-     element.value = value;
-     // Issue #56: Setting the placeholder causes problems if the element continues to have focus.
-     if (element != safeActiveElement()) {
-      // We can't use `triggerHandler` here because of dummy text/password inputs :(
-      setPlaceholder.call(element);
-     }
-    } else if ($element.hasClass('placeholder')) {
-     clearPlaceholder.call(element, true, value) || (element.value = value);
-    } else {
-     element.value = value;
-    }
-    // `set` can not return `undefined`; see http://jsapi.info/jquery/1.7.1/val#L2363
-    return $element;
-   }
-  };
-
-  if (!isInputSupported) {
-   valHooks.input = hooks;
-   propHooks.value = hooks;
-  }
-  if (!isTextareaSupported) {
-   valHooks.textarea = hooks;
-   propHooks.value = hooks;
-  }
-
-  $(function() {
-   // Look for forms
-   $(document).delegate('form', 'submit.placeholder', function() {
-    // Clear the placeholder values so they don't get submitted
-    var $inputs = $('.placeholder', this).each(clearPlaceholder);
-    setTimeout(function() {
-     $inputs.each(setPlaceholder);
-    }, 10);
-   });
-  });
-
-  // Clear placeholder values upon page reload
-  $(window).bind('beforeunload.placeholder', function() {
-   $('.placeholder').each(function() {
-    this.value = '';
-   });
-  });
-
- }
-
- function args(elem) {
-  // Return an object of element attributes
-  var newAttrs = {};
-  var rinlinejQuery = /^jQuery\d+$/;
-  $.each(elem.attributes, function(i, attr) {
-   if (attr.specified && !rinlinejQuery.test(attr.name)) {
-    newAttrs[attr.name] = attr.value;
-   }
-  });
-  return newAttrs;
- }
-
- function clearPlaceholder(event, value) {
-  var input = this;
-  var $input = $(input);
-  if (input.value == $input.attr('placeholder') && $input.hasClass('placeholder')) {
-   if ($input.data('placeholder-password')) {
-    $input = $input.hide().next().show().attr('id', $input.removeAttr('id').data('placeholder-id'));
-    // If `clearPlaceholder` was called from `$.valHooks.input.set`
-    if (event === true) {
-     return $input[0].value = value;
-    }
-    $input.focus();
-   } else {
-    input.value = '';
-    $input.removeClass('placeholder');
-    input == safeActiveElement() && input.select();
-   }
-  }
- }
-
- function setPlaceholder() {
-  var $replacement;
-  var input = this;
-  var $input = $(input);
-  var id = this.id;
-  if (input.value == '') {
-   if (input.type == 'password') {
-    if (!$input.data('placeholder-textinput')) {
-     try {
-      $replacement = $input.clone().attr({ 'type': 'text' });
-     } catch(e) {
-      $replacement = $('<input>').attr($.extend(args(this), { 'type': 'text' }));
-     }
-     $replacement
-      .removeAttr('name')
-      .data({
-       'placeholder-password': $input,
-       'placeholder-id': id
-      })
-      .bind('focus.placeholder', clearPlaceholder);
-     $input
-      .data({
-       'placeholder-textinput': $replacement,
-       'placeholder-id': id
-      })
-      .before($replacement);
-    }
-    $input = $input.removeAttr('id').hide().prev().attr('id', id).show();
-    // Note: `$input[0] != input` now!
-   }
-   $input.addClass('placeholder');
-   $input[0].value = $input.attr('placeholder');
-  } else {
-   $input.removeClass('placeholder');
-  }
- }
-
- function safeActiveElement() {
-  // Avoid IE9 `document.activeElement` of death
-  // https://github.com/mathiasbynens/jquery-placeholder/pull/99
-  try {
-   return document.activeElement;
-  } catch (err) {}
- }
- 
-
-}(this, document, jQuery));
 
 

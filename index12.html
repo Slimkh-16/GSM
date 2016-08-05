@@ -44,28 +44,40 @@
       </div>
       <div class="section-nav-box">
         <a href="#" class="section-nav-item wave-effect">COMPANY</a>
-        <span href="#" class="section-nav-item drop js_to_scroll">
+        <span class="section-nav-item drop js_to_scroll">
           PRODUCTS & SERVICES
           <div class="drop-box">
             <ul>
               <li class="drop-lev-2">
                 <span class="dr-bt">FOR OPERATORS</span>
                 <ul>
-                  <li><a href="#">All services</a></li>
+                  <li><a href="#"  data-toggle="modal" data-target="#requestModal">All services</a></li>
                 </ul>
               </li>
               <li class="drop-lev-2">
                 <span class="dr-bt">FOR  ENTERPRISES</span>
-                <ul>
-                  <li><a href="#">Industry</a></li>
-                  <li><a href="#">All services</a></li>
+                <ul class="lev-2">
+                  <li class="drop-lev-3">
+                    <a href="#" class="by-industry">Industry solutions</a>
+                    <ul class="lev-3">
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Financial and Insurance Services </a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Logistics</a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Fuel Stations</a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Retail</a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">E-Commerce </a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Aggregators </a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Tourism </a></li>
+                      <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Software Development </a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#"  class="all-serv">All services</a></li>
                 </ul>
               </li>
             </ul>
           </div>
         </span>
-        <a href="#" class="section-nav-item wave-effect">RESOURCES</a>
-        <a href="#" class="section-nav-item wave-effect"  data-toggle="modal" data-target="#contactModal">СONTACT US</a>
+        <a href="#" class="section-nav-item wave-effect" data-toggle="modal" data-target="#requestModal">RESOURCES</a>
+        <a href="#" class="section-nav-item wave-effect"  data-toggle="modal" data-target="#contactUs">СONTACT US</a>
       </div>
       <div class="search-box">
         <form action="#">
@@ -77,6 +89,12 @@
       </div>
     </div>
   </section>
+  <ul class="nav-brd">
+    <li class="current"><a href="#sect1"></a></li>
+    <li><a href="#sect2"></a></li>
+    <li><a href="#sect3"></a></li>
+    <li><a href="#sect4"></a></li>
+  </ul>
   <div id="wrapper" class="main-content">
     <!--wrapper start-->
     <!-- header SECTION-->
@@ -109,21 +127,25 @@
       </div>
     </header>
     <!-- header SECTION -->
-    <section class="section-top">
+    <section id="sect1" class="section-top">
       <div class="container">
         <div class="maps">
           <!-- <img src="images/map.svg" alt=""> -->
-          <svg version="1.1" class="map-svg"
+          <svg version="1.1" id="map_svg" class="map-svg"
              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 775.068 428.93" enable-background="new 0 0 775.068 428.93" xml:space="preserve">
-            <defs>
-              <linearGradient id="grad"
+              <rect x="0" y="0" width="775" height="428" fill="url(#grad)" clip-path="url(#myClip)" />
+              <!--<linearGradient id="grad"
                              x1="0%" y1="0%"
                              x2="90%" y2="0%">
                   <stop offset="0%" stop-color="#2a3ef2" />
                   <stop offset="100%" stop-color="#ffc40c" />
-                </linearGradient>
-            </defs>
-            <g fill="url(#grad)">
+              </linearGradient>-->
+              <radialGradient id="grad" cx="50%" cy="50%" r="50%" fx="50%" fy="25%">
+                <stop offset="0%" class="stop1" stop-color="#2a3ef2" />
+                <stop offset="100%" class="stop2" stop-color="#ffc40c" />
+              </radialGradient>
+            <defs>
+              <clipPath id="myClip">
               <path d="M223.557,426.824c0,1.124,0.871,2.106,1.998,2.106c1.126,0,2.154-0.982,2.154-2.106c0-1.126-1.028-2.083-2.154-2.083
                 C224.428,424.741,223.557,425.698,223.557,426.824"/>
               <path d="M235.004,425.082c0,1.128,0.855,1.975,1.982,1.975c1.126,0,1.916-0.847,1.916-1.975c0-1.125-0.79-2.127-1.916-2.127
@@ -2294,51 +2316,62 @@
                 c1.453-0.767,1.96-2.633,1.193-4.085c-0.546-1.031-1.632-1.659-2.736-1.659C297.483,1.139,297.032,1.242,296.613,1.464"/>
               <path d="M329.03,0c-0.447,0-0.9,0.105-1.327,0.331c-1.453,0.767-1.954,2.585-1.187,4.036c0.768,1.451,2.449,1.868,3.9,1.101
                 c1.453-0.767,2.038-2.382,1.271-3.832C331.145,0.61,330.106,0,329.03,0z"/>
-            </g>
+              </clipPath>
+
+            </defs>
           </svg>
         </div>
-        <div class="section-top-info quote">
+        <div class="section-top-info active">
           <p class="section-top-info__lg">
             <span class="hd-txt">
-            <span>Maximised</span> <br>
+            <span>MAXIMIZED </span> <br>
             CONNECTIVITY
             </span>
           </p>
-          <p class="text"> NTERNATIONAL TELECOMMUNICATIONS  PROVIDER MEETING OPEN CONNECTIVITY  REQUIREMENTS</p>
+          <p class="text">International Telecommunications provider meeting Open connectivity Requirements</p>
         </div>
-        <div class="section-top-info quote">
+        <div class="section-top-info quote" style="display:none">
           <p class="section-top-info__lg">
             <span class="hd-txt">
-            <span>MAXIMISED</span>  <br>
+            <span>MAXIMISED </span>  <br>
             RELIABILITY
             </span>
           </p>
-          <p class="text">ISO 20007, 20000 and 9001 Certified company</p>
+          <p class="text">ISO 27001, 20000 and 9001 Certified company</p>
         </div>
-        <div class="section-top-info quote">
+        <div class="section-top-info section-top-info--2 quote" style="display:none;">
           <p class="section-top-info__lg">
             <span class="hd-txt">
-            <span>MAXIMISED</span>   <br>
+            <span>MAXIMISED </span>   <br>
             MESSAGING
             </span>
           </p>
           <p class="text">Bulk messaging in multiple messengers and variety of settings. Direct contracts with key MNOs and International HUBS</p>
         </div>
-        <div class="section-top-info quote">
+        <div class="section-top-info quote" style="display:none">
           <p class="section-top-info__lg">
             <span class="hd-txt">
-            <span>MAXIMISED</span>   <br>
+            <span>MAXIMISED </span>   <br>
             TRANSPARENCY
             </span>
           </p>
-          <p class="text">Truly transparent business practice. State-of-the-art Anti-Spam protection system </p>
+          <p class="text">Truly transparent business practice. State-of-the-art Anti-Spam protection system</p>
+        </div>
+        <div class="section-top-info quote" style="display:none">
+          <p class="section-top-info__lg">
+            <span class="hd-txt">
+            <span>MAXIMIZED </span> <br>
+            CONNECTIVITY
+            </span>
+          </p>
+          <p class="text">International Telecommunications provider meeting Open connectivity Requirements</p>
         </div>
       </div>
     </section>
     <section class="section-nav section-nav-ed">
       <div class="container text-center">
         <div class="section-nav-box">
-          <a href="#" class="section-nav-item wave-effect">COMPANY</a>
+          <a href="#"  data-toggle="modal" data-target="#requestModal" class="section-nav-item wave-effect">COMPANY</a>
           <span href="#" class="section-nav-item drop js_to_scroll">
             PRODUCTS & SERVICES
             <div class="drop-box">
@@ -2346,25 +2379,37 @@
                 <li class="drop-lev-2">
                   <span class="dr-bt">FOR OPERATORS</span>
                   <ul>
-                    <li><a href="#">All services</a></li>
+                    <li><a href="#"  data-toggle="modal" data-target="#requestModal">All services</a></li>
                   </ul>
                 </li>
                 <li class="drop-lev-2">
                   <span class="dr-bt">FOR  ENTERPRISES</span>
-                  <ul>
-                    <li><a href="#">Industry</a></li>
-                    <li><a href="#">All services</a></li>
+                  <ul class="lev-2">
+                    <li class="drop-lev-3">
+                      <a href="#" class="by-industry">Industry solutions</a>
+                      <ul class="lev-3">
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Financial and Insurance Services </a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Logistics</a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Fuel Stations</a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Retail</a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">E-Commerce </a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Aggregators </a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Tourism </a></li>
+                        <li class="lev-3-li"><a href="#" data-toggle="modal" data-target="#requestModal">Software Development </a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"  class="all-serv">All services</a></li>
                   </ul>
                 </li>
               </ul>
             </div>
           </span>
-          <a href="#" class="section-nav-item wave-effect">RESOURCES</a>
-          <a href="#" class="section-nav-item wave-effect" data-toggle="modal" data-target="#contactModal">СONTACT US</a>
+          <a href="#" data-toggle="modal" data-target="#requestModal" class="section-nav-item wave-effect">RESOURCES</a>
+          <a href="#" class="section-nav-item wave-effect" data-toggle="modal" data-target="#contactUs">СONTACT US</a>
         </div>
       </div>
     </section>
-    <section class="section-product-and-service">
+    <section id="sect2" class="section-product-and-service">
       <div class="container">
         <div class="head">PRODUCTS & SERVICES</div>
         <div class="section-product-box clearfix">
@@ -2372,59 +2417,127 @@
             <div class="section-product-list">
               <div class="section-product-list__head">FOR OPERATORS</div>
               <ul>
-                <li><a href="#" data-hover="MESSAGING (A2P/P2P)">MESSAGING (A2P/P2P) </a></li>
-                <li class="lst-sub"><a href="#" data-hover="SMS">SMS  </a></li>
-                <li class="lst-sub"><a href="#" data-hover="MMS">MMS  </a></li>
-                <li class="lst-sub"><a href="#" data-hover="OTT MESSENGERS">OTT MESSENGERS </a></li>
-                <li class="lst-sub"><a href="#" data-hover="EMAIL">EMAIL </a></li>
-                <li class="lst-sub"><a href="#" data-hover="PUSH">PUSH </a></li>
-                <li><a href="#" data-hover="VOIP">VOIP </a></li>
-                <li><a href="#" data-hover="SIGNALING">SIGNALING </a></li>
-                <li><a href="#" data-hover="GRX  FIREWALL">GRX  FIREWALL</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="MESSAGING (A2P/P2P)">MESSAGING (A2P/P2P) </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="SMS">SMS  </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="MMS">MMS  </a></li>
+                <li class="lst-sub"><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="OTT MESSENGERS">OTT MESSENGERS </a></li>
+                <li class="lst-sub"><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="EMAIL">EMAIL </a></li>
+                <li class="lst-sub"><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="PUSH">PUSH </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="VOIP">VOIP </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="SIGNALING">SIGNALING </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="GRX  FIREWALL">GRX  FIREWALL</a></li>
               </ul>
-              <a href="#" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
+              <a href="#" data-hover="REQUEST INFO" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
             </div>
           </div>
           <div class="col-md-6 col-xs-6 text-left">
             <div class="section-product-list active visible">
               <div class="section-product-list__head">FOR  ENTERPRISES</div>
               <ul>
-                <li><a href="#" data-hover="MESSAGING (A2P)">MESSAGING (A2P)</a></li>
-                <li class="lst-sub"><a href="#" data-hover="SMS">SMS  </a></li>
-                <li class="lst-sub"><a href="#" data-hover="MMS">MMS  </a></li>
-                <li class="lst-sub"><a href="#" data-hover="OTT MESSENGERS">OTT MESSENGERS </a></li>
-                <li class="lst-sub"><a href="#" data-hover="EMAIL">EMAIL </a></li>
-                <li class="lst-sub"><a href="#" data-hover="PUSH">PUSH </a></li>
-                <li><a href="#" data-hover="MOBILE ADVERTISING">MOBILE ADVERTISING    </a></li>
-                <li><a href="#" data-hover="SHORT AND LONG NUMBERS">SHORT AND LONG NUMBERS  </a></li>
-                <li><a href="#" data-hover="SOFTWARE DEVELOPMENT">SOFTWARE DEVELOPMENT</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="MESSAGING (A2P)">MESSAGING (A2P)</a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="SMS">SMS  </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="MMS">MMS  </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="OTT MESSENGERS">OTT MESSENGERS </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="EMAIL">EMAIL </a></li>
+                <li class="lst-sub"><a data-toggle="modal" data-target="#requestModal" href="#" data-hover="PUSH">PUSH </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="MOBILE ADVERTISING">MOBILE ADVERTISING    </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="SHORT AND LONG NUMBERS">SHORT AND LONG NUMBERS  </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="SOFTWARE DEVELOPMENT">SOFTWARE DEVELOPMENT</a></li>
               </ul>
-              <a href="#" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
+              <a href="#" data-hover="REQUEST INFO" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
             </div>
             <div class="section-product-list">
               <div class="section-product-list__head">Industry solutions</div>
               <ul>
-                <li><a href="#" data-hover="Financial and Insurance Services">Financial and Insurance Services </a></li>
-                <li><a href="#" data-hover="Logistics">Logistics</a></li>
-                <li><a href="#" data-hover="Fuel Stations">Fuel Stations</a></li>
-                <li><a href="#" data-hover="Retail">Retail</a></li>
-                <li><a href="#" data-hover="E-Commerce">E-Commerce </a></li>
-                <li><a href="#" data-hover="Aggregators">Aggregators </a></li>
-                <li><a href="#" data-hover="Tourism">Tourism </a></li>
-                <li><a href="#" data-hover="Software Development">Software Development </a></li>
-                <li><a href="#" data-hover="GRX  FIREWALL">GRX  FIREWALL</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Financial and Insurance Services">Financial and Insurance Services </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Logistics">Logistics</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Fuel Stations">Fuel Stations</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Retail">Retail</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="E-Commerce">E-Commerce </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Aggregators">Aggregators </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Tourism">Tourism </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Software Development">Software Development </a></li>
+                <!-- <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="GRX  FIREWALL">GRX  FIREWALL</a></li> -->
               </ul>
-              <a href="#" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
+              <a href="#" data-hover="REQUEST INFO" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
             </div>
           </div>
         </div>
-        <span class="veiw-introd">VIEW BY INDUSTRIES</span>
+        <span class="veiw-introd">Industry solutions</span>
       </div>
     </section>
     <section class="clients">
       <div class="container">
         <div class="section-head"><span>OUR CLIENTS & PARTNERS</span></div>
-        <div class="clients-box">
+        <div class="clients-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="clients-box-item">
+                <img src="assets/images/cl1.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl2.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl3.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl4.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clients-box-item">
+                <img src="assets/images/cl5.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl6.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl19.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl7.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clients-box-item">
+                <img src="assets/images/cl8.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl9.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl10.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl11.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clients-box-item">
+                <img src="assets/images/cl12.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl22.jpg" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl15.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="clients-box-item">
+                <img src="assets/images/cl16.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl17.png" alt="">
+              </div>
+              <div class="clients-box-item">
+                <img src="assets/images/cl18.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--         <div class="clients-box">
           <div class="clients-box-row visible active">
             <div class="clients-box-item">
               <img src="assets/images/cl1.png" alt="">
@@ -2444,13 +2557,13 @@
               <img src="assets/images/cl5.jpg" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl6.jpg" alt="">
+              <img src="assets/images/cl6.png" alt="">
             </div>
             <div class="clients-box-item">
               <img src="assets/images/cl19.jpg" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl7.gif" alt="">
+              <img src="assets/images/cl7.png" alt="">
             </div>
           </div>
           <div class="clients-box-row">
@@ -2486,7 +2599,7 @@
               <img src="assets/images/cl17.png" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl18.gif" alt="">
+              <img src="assets/images/cl18.png" alt="">
             </div>
           </div>
           <div class="clients-more js_client_more">
@@ -2495,8 +2608,8 @@
             <span class="icon-str"></span>
             <span class="icon-str"></span>
           </div>
-        </div>
-<!--         <div class="clients-box">
+        </div> -->
+      <!--         <div class="clients-box">
           <div class="clients-box-row visible active">
             <div class="clients-box-item">
               <img src="assets/images/cl1.png" alt="">
@@ -2516,10 +2629,10 @@
               <img src="assets/images/cl5.jpg" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl6.jpg" alt="">
+              <img src="assets/images/cl6.png" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl7.gif" alt="">
+              <img src="assets/images/cl7.png" alt="">
             </div>
           </div>
           <div class="clients-box-row">
@@ -2558,7 +2671,7 @@
               <img src="assets/images/cl17.png" alt="">
             </div>
             <div class="clients-box-item">
-              <img src="assets/images/cl18.gif" alt="">
+              <img src="assets/images/cl18.png" alt="">
             </div>
           </div>
           <div class="clients-box-row">
@@ -2612,7 +2725,7 @@
         </div> -->
       </div>
     </section>
-    <section class="news-section">
+    <section id="sect3" class="news-section">
       <div class="container">
         <div class="news-box col-xs-12">
           <div class="news-slider swiper-container">
@@ -2626,12 +2739,12 @@
                     <li>Client’s software integration</li>
                   </ul>
                   <span class="date">01.01.2016</span>
-                  <a href="#" data-news="#news1" class="read-more">read more </a>
+                  <a href="#" data-hover="read more" data-news="#news1" class="read-more">read more </a>
                 </div>
                 <div class="col-xs-6 pl-0">
                   <div class="news-slider-img" data-swiper-parallax="-500">
                     <div class="img-box">
-                      <img src="assets/images/news.jpg" alt="">
+                      <img src="assets/images/banner mobile.jpg" alt="">
                     </div>
                   </div>
                 </div>
@@ -2645,7 +2758,7 @@
                     <li>Client’s software integration</li>
                   </ul>
                   <span class="date">01.01.2016</span>
-                  <a href="#" data-news="#news2" class="read-more">read more </a>
+                  <a href="#" data-hover="read more" data-news="#news2" class="read-more">read more </a>
                 </div>
                 <div class="col-xs-6 pl-0">
                   <div class="news-slider-img" data-swiper-parallax="-500">
@@ -2664,12 +2777,12 @@
                     <li>Client’s software integration</li>
                   </ul>
                   <span class="date">01.01.2016</span>
-                  <a href="#" data-news="#news3" class="read-more">read more </a>
+                  <a href="#" data-hover="read more" data-news="#news3" class="read-more">read more </a>
                 </div>
                 <div class="col-xs-6 pl-0">
                   <div class="news-slider-img" data-swiper-parallax="-500">
                     <div class="img-box">
-                      <img src="assets/images/news.jpg" alt="">
+                      <img src="assets/images/banner mobile.jpg" alt="">
                     </div>
                   </div>
                 </div>
@@ -2683,7 +2796,7 @@
                     <li>Client’s software integration</li>
                   </ul>
                   <span class="date">01.01.2016</span>
-                  <a href="#" data-news="#news4" class="read-more">read more </a>
+                  <a href="#" data-hover="read more" data-news="#news4" class="read-more">read more </a>
                 </div>
                 <div class="col-xs-6 pl-0">
                   <div class="news-slider-img" data-swiper-parallax="-500">
@@ -2697,6 +2810,7 @@
           </div>
         </div>
         <div class="news-box col-xs-12">
+          <div class="case-slider-bg"></div>
           <div class="case-slider swiper-container">
             <div class="swiper-wrapper">
               <div class="case-slide swiper-slide">
@@ -2718,14 +2832,14 @@
                     <li>interactive program</li>
                     <li>in cooperation with GMS</li>
                   </ul>
-                  <a href="#" data-news="#news2" class="read-more">read more </a>
+                  <a href="#"  data-hover="read more" data-news="#news2" class="read-more">read more </a>
                 </div>
               </div>
               <div class="case-slide swiper-slide">
                 <div class="col-xs-6 pl-0">
                   <div class="case-slider-left">
                     <div class="case-slider-box">
-                      <p>During the time of cooperation, GMS has always fulfilled the tasks set and has proven itself a reliable partner.GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
+                      <p>GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
                        
                       <p>During the time of cooperation, GMS has always fulfilled the tasks set and has proven itself a reliable partner. </p>
 
@@ -2740,7 +2854,7 @@
                     <li>interactive program</li>
                     <li>in cooperation with GMS</li>
                   </ul>
-                  <a href="#" data-news="#news2" class="read-more">read more </a>
+                  <a href="#" data-hover="read more" data-news="#news2" class="read-more">read more </a>
                 </div>
               </div>
             </div>
@@ -2748,13 +2862,12 @@
         </div>
       </div>
     </section>
-    <section class="feed">
+    <section id="sect4" class="feed">
       <div class="container">
         TO FIND OUT MORE ABOUT OUR PRODUCTS AND SERVICES 
-        <a href="#" class="" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
+        <a href="#" data-hover="REQUEST INFO" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
       </div>
     </section>
-    <div class="above-footer"></div>
   </div>
   <!--wrapper end-->
   <div class="news-window" data-news="#news1">
@@ -2793,6 +2906,34 @@
         GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
         <img src="assets/images/news.jpg" alt="">
       </div>
+      <div class="share-soc">
+        <a href="#" class="fb">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+             xml:space="preserve">
+            <g>
+              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="ln">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+             xml:space="preserve">
+          <g>
+            <path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+              c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+              v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+              C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+              c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+               M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+          </g>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
   <div class="news-window" data-news="#news2">
@@ -2810,6 +2951,34 @@
         GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
         <img src="assets/images/news.jpg" alt="">
         <p>GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
+      </div>
+      <div class="share-soc">
+        <a href="#" class="fb">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+             xml:space="preserve">
+            <g>
+              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="ln">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+             xml:space="preserve">
+          <g>
+            <path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+              c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+              v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+              C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+              c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+               M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+          </g>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -2829,12 +2998,40 @@
         <img src="assets/images/news.jpg" alt="">
         <p>GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
       </div>
+      <div class="share-soc">
+        <a href="#" class="fb">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+             xml:space="preserve">
+            <g>
+              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="ln">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+             xml:space="preserve">
+          <g>
+            <path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+              c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+              v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+              C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+              c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+               M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+          </g>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
   <div class="news-window" data-news="#news4">
     <div class="news-window-head">
       <span class="news-window_close js_close_news"></span>
-      NEWS 3
+      NEWS 4
     </div>
     <div class="news-window-body">
       <div class="news-window-body-over">
@@ -2846,6 +3043,34 @@
         GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
         <img src="assets/images/news.jpg" alt="">
         <p>GMS has been a partner of MTI since 2009, providing services and solutions in the field of mobile marketing.</p>
+      </div>
+      <div class="share-soc">
+        <a href="#" class="fb">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+             xml:space="preserve">
+            <g>
+              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+            </g>
+          </svg>
+        </a>
+        <a href="#" class="ln">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+             xml:space="preserve">
+          <g>
+            <path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+              c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+              v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+              C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+              c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+               M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+          </g>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -2859,25 +3084,25 @@
         <div class="col-xs-2">
           <div class="foot-head">COMPANY  </div>
           <ul class="foot-nav">
-            <li><a href="#" data-hover="About GMS">About GMS</a></li>
-            <li><a href="#" data-hover="Social commitment">Social commitment</a></li>
-            <li><a href="#" data-hover="Contacts">Contacts</a></li>
-            <li><a href="#" data-hover="News">News</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="About GMS">About GMS</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Social commitment">Social commitment</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Contacts">Contacts</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="News">News</a></li>
           </ul>
         </div>
         <div class="col-xs-3">
           <div class="foot-head"> PRODUCTS & SERVICES   </div>
           <ul class="foot-nav">
-            <li><a href="#" data-hover="For Operators">For Operators</a></li>
-            <li><a href="#" data-hover="For Enterprises">For Enterprises</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="For Operators">For Operators</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="For Enterprises">For Enterprises</a></li>
           </ul>
         </div>
         <div class="col-xs-2">
           <div class="foot-head">RESOURCES  </div>
           <ul class="foot-nav">
-            <li><a href="#" data-hover="Company Brochure">Company Brochure</a></li>
-            <li><a href="#" data-hover="Success Stories">Success Stories</a></li>
-            <li><a href="#" data-hover="Whitepapers">Whitepapers</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Company Brochure">Company Brochure</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Success Stories">Success Stories</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="Whitepapers">Whitepapers</a></li>
           </ul>
         </div>
         <div class="col-xs-3">
@@ -2903,203 +3128,1052 @@
     </div>
   </footer>
   <!-- FOOTER SECTION -->
-  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
-    
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <span class="news-window_close"  data-dismiss="modal"></span>
-        <div class="modal-body">
-          <div class="modal-heading">CONTACT HR</div>
-          <div class="modal-form">
-            <form action="#" class="js_validate">
-              <div class="form-head">to send your CV or inquiry fill in the following form</div>
-              <div class="form-field">
-                <div class="col">
-                  <div class="input-anim">
-                    <input type="text" id="inp1"  class="input-field" required>
-                    <label for="inp1">fist Name <sup>*</sup></label>
+  <div class="modal fade" id="contactUs" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Contact us</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" title="fill in this field" class="input-field" id="cont10" required>
+                      <label for="cont10">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="cont20" title="fill in this field" class="input-field" required>
+                      <label for="cont20">Last Name <sup>*</sup></label>
+                    </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="form-field">
                   <div class="input-anim">
-                    <input type="text" id="inp2" class="input-field" required>
-                    <label for="inp2">Last Name <sup>*</sup></label>
+                    <input type="email" id="cont30" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="cont30">EMAIL <sup>*</sup></label>
                   </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="email" id="inp3" class="input-field" data-validate="email" required>
-                  <label for="inp3">EMAIL <sup>*</sup></label>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="cont0" title="fill in this field" class="input-field">
+                    <label for="cont0" class="tel">TEL</label>
+                  </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="tel" id="tel" class="input-field">
-                  <label for="tel" class="tel">TEL</label>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio27">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio27">No</label>
+                  </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="text" id="inp4" class="input-field" required>
-                  <label for="inp4">COUNTRY  <sup>*</sup></label>
+                <div class="form-field select-field visible">
+                    <!-- <label  class="rad-head">Send to:</label> -->
+                    <div class="select">
+                      <select class="selectpicker" name="sel">
+                        <option value="Send to:" selected disabled>Ask:</option>
+                        <option value="Sales">Sales</option>
+                        <option value="PR">PR</option>
+                        <option value="HR">HR</option>
+                        <option value="Security">Security</option>
+                      </select>
+                    </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="text" id="inp5" class="input-field" required>
-                  <label for="inp5">Vacancy   <sup>*</sup></label>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="cont47" title="fill in this field" class="input-field" required>
+                    <label for="cont47">Company   <sup>*</sup></label>
+                  </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <textarea type="text" id="inp6" class="input-field" required></textarea>
-                  <label for="inp6">MESSAGE     <sup>*</sup></label>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="cont40" title="fill in this field" class="input-field" required>
+                    <label for="cont40">COUNTRY  <sup>*</sup></label>
+                  </div>
                 </div>
-              </div>
-              <div class="file-field clearfix">
-                <div class="file">
-                  <input type="file" id="file">
-                  <label for="file" class="wave-effect">UPLOAD THE FILE</label>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" id="cont60" title="fill in this field" class="input-field" required></textarea>
+                    <label for="cont60">MESSAGE     <sup>*</sup></label>
+                  </div>
                 </div>
-                <div class="name-file">file not chosen</div>
-                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
-              </div>
-              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-              <div class="required-field">Thee fields with <sup>*</sup> are mandatory to send the message</div>
-              <div class="check-field">
-                <div class="check">
-                  <input type="checkbox" id="check">
-                  <label for="check">I accept the privacy policy </label>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple title="fill in this field" id="file25">
+                    <label for="file25" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
                 </div>
-              </div>
-              <div class="bott-form">By completing this form you are opting in to receive communications from GMS</div>
-              <button type="submit" class="wave-effect form-butt">SuBMIT</button>
-            </form>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox"  id="check19">
+                    <label for="check19">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+      
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">CONTACT HR</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">to send your CV or inquiry fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="inp1" title="fill in this field"  class="input-field" required>
+                      <label for="inp1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="inp2" title="fill in this field" class="input-field" required>
+                      <label for="inp2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="inp3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="inp3">EMAIL <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="tel" title="fill in this field" class="input-field">
+                    <label for="tel" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="inp4" title="fill in this field" class="input-field" required>
+                    <label for="inp4">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="inp5" title="fill in this field" class="input-field" required>
+                    <label for="inp5">Vacancy   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="inp6" class="input-field" required></textarea>
+                    <label for="inp6">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file">
+                    <label for="file" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt">SuBMIT</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <span class="news-window_close"  data-dismiss="modal"></span>
-        <div class="modal-body">
-          <div class="modal-heading">Request info</div>
-          <div class="modal-form">
-            <form action="#" class="js_validate">
-              <div class="form-head">To recime more information about our productions and services, fill in the following form</div>
-              <div class="form-field">
-                <div class="col">
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Request info</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text"  class="input-field" id="inp10" title="fill in this field" required>
+                      <label for="inp10">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="inp20" class="input-field" title="fill in this field" required>
+                      <label for="inp20">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
                   <div class="input-anim">
-                    <input type="text"  class="input-field" id="inp10" required>
-                    <label for="inp10">fist Name <sup>*</sup></label>
+                    <input type="email" id="inp30" class="input-field" title="fill in this field" data-validate="email" required>
+                    <label for="inp30">EMAIL <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="col">
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="tel0" class="input-field" title="fill in this field">
+                    <label for="tel0" class="tel">TEL</label> 
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio17">Yes</label>
+                    <label class="rad-label"><input type="radio" data-rad="no" name="radio17" >No</label>
+                  </div>
+                </div>
+                <div class="form-field select-field visible">
+                    <!-- <label  class="rad-head">Send to:</label> -->
+                    <div class="select">
+                      <select class="selectpicker" name="sel">
+                        <option value="Send to:" selected disabled>Ask:</option>
+                        <option value="Sales">Sales</option>
+                        <option value="PR">PR</option>
+                        <option value="HR">HR</option>
+                        <option value="Security">Security</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-field">
                   <div class="input-anim">
-                    <input type="text" id="inp20" class="input-field" required>
-                    <label for="inp20">Last Name <sup>*</sup></label>
+                    <input type="text" id="inp41" title="fill in this field" class="input-field" required>
+                    <label for="inp41">Company   <sup>*</sup></label>
                   </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="email" id="inp30" class="input-field" data-validate="email" required>
-                  <label for="inp30">EMAIL <sup>*</sup></label>
-                </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="tel" id="tel0" class="input-field">
-                  <label for="tel0" class="tel">TEL</label>
-                </div>
-              </div>
-              <div class="form-field">
-                <div class="col rad-box">
-                  <label class="rad-head">Already our client?</label>
-                  <label><input type="radio" name="radio">Yes</label>
-                  <label><input type="radio" name="radio" checked>No</label>
-                </div>
-                <div class="col rad-box">
-                  <label  class="rad-head">Ask:</label>
-                  <div class="select">
-                    <select name="sel">
-                      <option value="SELECT" disabled selected>Select</option>
-                      <option value="1">1</option>
-                      <option value="1">1</option>
-                    </select>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="inp40" class="input-field" title="fill in this field" required>
+                    <label for="inp4">COUNTRY  <sup>*</sup></label>
                   </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="text" id="inp40" class="input-field" required>
-                  <label for="inp4">COUNTRY  <sup>*</sup></label>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" id="inp60" class="input-field" title="fill in this field" required></textarea>
+                    <label for="inp60">MESSAGE     <sup>*</sup></label>
+                  </div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <input type="text" id="inp50" class="input-field" required>
-                  <label for="inp5">Vacancy   <sup>*</sup></label>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file2">
+                    <label for="file2" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file name-file-2">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
                 </div>
-              </div>
-              <div class="form-field">
-                <div class="input-anim">
-                  <textarea type="text" id="inp60" class="input-field" required></textarea>
-                  <label for="inp60">MESSAGE     <sup>*</sup></label>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check1" >
+                    <label for="check1">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
                 </div>
-              </div>
-              <div class="file-field clearfix">
-                <div class="file">
-                  <input type="file" id="file2">
-                  <label for="file2" class="wave-effect">UPLOAD THE FILE</label>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt">SuBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="modal fade" id="customerSupport" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Сustomer Support </div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">We strive to provide you with the best service possible.<br> To receive more information about our products and services, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sup1" title="fill in this field"  class="input-field" required>
+                      <label for="sup1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sup2" title="fill in this field" class="input-field" required>
+                      <label for="sup2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
                 </div>
-                <div class="name-file-2">file not chosen</div>
-                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
-              </div>
-              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-              <div class="required-field">Thee fields with <sup>*</sup> are mandatory to send the message</div>
-              <div class="check-field">
-                <div class="check">
-                  <input type="checkbox" id="check1">
-                  <label for="check1">I accept the privacy policy </label>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="sup3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="sup3">EMAIL <sup>*</sup></label>
+                  </div>
                 </div>
-              </div>
-              <div class="bott-form">By completing this form you are opting in to receive communications from GMS</div>
-              <button type="submit" class="wave-effect form-butt">SuBMIT</button>
-            </form>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="sup4" title="fill in this field" class="input-field">
+                    <label for="sup4" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio2">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio2" >No</label>
+                  </div>
+                </div>
+                <div class="form-field select-field visible">
+                    <!-- <label  class="rad-head">Send to:</label> -->
+                    <div class="select">
+                      <select class="selectpicker" name="sel">
+                        <option value="Send to:" selected disabled>Ask:</option>
+                        <option value="Sales">Sales</option>
+                        <option value="PR">PR</option>
+                        <option value="HR">HR</option>
+                        <option value="Security">Security</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sup6" title="fill in this field" class="input-field" required>
+                    <label for="sup6">Company   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sup5" title="fill in this field" class="input-field" required>
+                    <label for="sup5">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="sup7" class="input-field" required></textarea>
+                    <label for="sup7">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file3">
+                    <label for="file3" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox"  id="check3" >
+                    <label for="check3">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div> 
-  <div class="modal fade" id="thank" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <span class="news-window_close"  data-dismiss="modal"></span>
-        <div class="modal-body">
-          <div class="modal-heading text-center">Thank you</div>
-          <div class="modal-form text-center">
-            asda sdas  asd
+    <div class="modal fade" id="contactSales" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Contact Sales</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sal1" title="fill in this field"  class="input-field" required>
+                      <label for="sal1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sal2" title="fill in this field" class="input-field" required>
+                      <label for="sal2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="sal3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="sal3">EMAIL <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="sal4" title="fill in this field" class="input-field">
+                    <label for="sal4" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio5">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio5" >No</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sal6" title="fill in this field" class="input-field" required>
+                    <label for="sal6">Company   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sal5" title="fill in this field" class="input-field" required>
+                    <label for="sal5">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="sal7" class="input-field" required></textarea>
+                    <label for="sal7">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file4">
+                    <label for="file4" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check4" >
+                    <label for="check4">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div> 
+    <div class="modal fade" id="contactPR" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Contact PR</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="pr1" title="fill in this field"  class="input-field" required>
+                      <label for="pr1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="pr2" title="fill in this field" class="input-field" required>
+                      <label for="pr2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="pr3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="pr3">EMAIL <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="pr4" title="fill in this field" class="input-field">
+                    <label for="pr4" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio6">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio6" >No</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="pr6" title="fill in this field" class="input-field" required>
+                    <label for="pr6">Company   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="pr5" title="fill in this field" class="input-field" required>
+                    <label for="pr5">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="pr7" class="input-field" required></textarea>
+                    <label for="pr7">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file5">
+                    <label for="file5" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check5" >
+                    <label for="check5">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="contactToCeo" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Сontact to CEO</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To contact our CEO please complete the following form. Your opinion is very important to us!</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="ceo1" title="fill in this field" class="input-field" required>
+                      <label for="ceo1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="ceo2" title="fill in this field" class="input-field" required>
+                      <label for="ceo2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="ceo3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="ceo3">EMAIL <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="ceo4" title="fill in this field" class="input-field">
+                    <label for="ceo4" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio8">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio8" >No</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="ceo6" title="fill in this field" class="input-field" required>
+                    <label for="ceo6">Company   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="ceo5" title="fill in this field" class="input-field" required>
+                    <label for="ceo5">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="ceo7" class="input-field" required></textarea>
+                    <label for="ceo7">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file6">
+                    <label for="file6" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check6" >
+                    <label for="check6">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade"  id="leaveFeedback" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Leave feedback</div>
+            <div class="modal-form">
+             
+                <div class="form-head">To leave feedback, fill in the following form. Your opinion is very important to us!</div>
+                <div class="form-field">
+                  <div class="rad-box select-field">
+                    <!-- <label class="rad-head">Topic</label> -->
+                    <div class="select">
+                      <select name="sel" class="selectpicker data-form">
+                        <option value="Topic" disabled="" selected="">Topic</option>
+                        <option data-form="1" value="Question">Question</option>
+                        <option data-form="1" value="Thank you message">Thank you message</option>
+                        <option data-form="2" value="Evaluate the Quality of Service">Evaluate the Quality of Service</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-box" data-form="1">
+                  <form action="#" class="js_validate">
+                    <div class="form-field">
+                      <div class="col">
+                        <div class="input-anim">
+                          <input type="text" title="fill in this field" id="feed1"  class="input-field" required>
+                          <label for="feed1">first Name <sup>*</sup></label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="input-anim">
+                          <input type="text" title="fill in this field" id="feed2" class="input-field" required>
+                          <label for="feed2">Last Name <sup>*</sup></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <div class="input-anim">
+                        <input type="email" title="fill in this field" id="feed3" class="input-field" data-validate="email" required>
+                        <label for="feed3">EMAIL <sup>*</sup></label>
+                      </div>
+                    </div>
+                    <div class="form-field visible" >
+                      <div class="input-anim" >
+                        <input type="tel" title="fill in this field" id="feed4" class="input-field">
+                        <label for="feed4" class="tel">TEL</label>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <div class="rad-box">
+                        <label class="rad-head">Already our client? <sup>*</sup></label>
+                        <label class="rad-label"><input type="radio" data-rad="yes" name="radio9">Yes</label>
+                        <label class="rad-label "><input type="radio" data-rad="no" name="radio9" >No</label>
+                      </div>
+                    </div>
+                    <div class="form-field select-field visible">
+                        <div class="select">
+                          <select class="selectpicker" name="sel">
+                            <option value="Send to:" selected disabled>Send to:</option>
+                            <option value="Sales">Sales</option>
+                            <option value="PR">PR</option>
+                            <option value="HR">HR</option>
+                            <option value="Security">Security</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                      <div class="input-anim">
+                        <input type="text" title="fill in this field" id="feed6" class="input-field" required>
+                        <label for="feed6">Company   <sup>*</sup></label>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <div class="input-anim">
+                        <input type="text" title="fill in this field" id="feed5" class="input-field" required>
+                        <label for="feed5">COUNTRY  <sup>*</sup></label>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <div class="input-anim">
+                        <textarea maxlength="2000" title="fill in this field"id="feed7" class="input-field" required></textarea>
+                        <label for="feed7">MESSAGE     <sup>*</sup></label>
+                      </div>
+                    </div>
+                    <div class="file-field clearfix">
+                      <div class="file">
+                        <span class="news-window_close remove-file js_remove_file"></span>
+                        <input type="file" multiple id="file7">
+                        <label for="file7" class="wave-effect">UPLOAD THE FILE</label>
+                      </div>
+                      <div class="name-file">file not chosen</div>
+                      <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                    </div>
+                    <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                    <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                    <div class="check-field privacy-policy">
+                      <div class="check">
+                        <input type="checkbox" id="check7" >
+                        <label for="check7">I accept the privacy policy </label>
+                      </div>
+                      <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                    </div>
+                    <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                    <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+                  </form>
+                </div>
+                <div class="form-box" data-form="2">
+                  <form action="#" class="js_validate">
+                  <div class="form-field">
+                    <div class="col">
+                      <div class="input-anim">
+                        <input type="text" id="feed12" title="fill in this field" class="input-field" required>
+                        <label for="feed12">first Name <sup>*</sup></label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-anim">
+                        <input type="text" id="feed22" title="fill in this field" class="input-field" required>
+                        <label for="feed22">Last Name <sup>*</sup></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <input type="email" id="feed32" title="fill in this field" class="input-field" data-validate="email" required>
+                      <label for="feed32">EMAIL <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="form-field visible" >
+                    <div class="input-anim" >
+                      <input type="tel" id="feed42" title="fill in this field" class="input-field">
+                      <label for="feed42" class="tel">TEL</label>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="rad-box">
+                      <label class="rad-head">Already our client? <sup>*</sup></label>
+                      <label class="rad-label"><input type="radio" data-rad="yes" name="radio44">Yes</label>
+                      <label class="rad-label "><input type="radio" data-rad="no" name="radio44"  >No</label>
+                    </div>
+                  </div>
+                  <div class="form-field select-field select-other visible">
+                      <!-- <label  class="rad-head">Send to:</label> -->
+                      <div class="select">
+                        <select class="selectpicker" name="sel">
+                          <option value="Send to:" selected disabled>Evaluate:</option>
+                          <option value="Company">Company</option>
+                          <option value="Sales">Sales</option>
+                          <option value="PR">PR</option>
+                          <option value="HR">HR</option>
+                          <option value="Security">Security</option>
+                          <option value="Other" data-select="other">Other</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="form-field form-other">
+                    <div class="input-anim">
+                      <textarea type="text" id="feed72" title="fill in this field" class="input-field" required></textarea>
+                      <label for="feed72">Please, specify <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <input type="text" id="feed62" title="fill in this field" class="input-field" required>
+                      <label for="feed62">Company   <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <input type="text" id="feed52" title="fill in this field" class="input-field" required>
+                      <label for="feed52">COUNTRY  <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="rait-field">
+                    <span class="tt-upp">Please fill the questionnaire below</span>
+                    <ul>
+                      <li>
+                        <div class="br-capt">
+                          <div class="br-capt-spn">
+                            <span>BAD</span>
+                            <span>GOOD</span>
+                            <span>EXCELLENT</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="clearfix">
+                        <span class="rt-tlt">Are you satisfied by the cooperation as a whole?</span>
+                        <!-- <input class="js_rating" data-show-clear="false" data-show-caption="false"> -->
+                          <select class="js_rating" name="rating">
+                            <option value="1">1</option>
+                            <option value="2" selected="selected">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                          </select>
+                      </li>
+                      <li>
+                        <span  class="rt-tlt">How much are you willing to recommend us to your friends, partners?</span>
+                        <select class="js_rating" name="rating">
+                          <option value="1">1</option>
+                          <option value="2" selected="selected">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </li>
+                      <li>
+                        <span  class="rt-tlt">Does our solution/offer meet your expectations?</span>
+                        <select class="js_rating" name="rating">
+                          <option value="1">1</option>
+                          <option value="2" selected="selected">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </li>
+                      <li>
+                        <span  class="rt-tlt">Evaluate the degree of interest of the Company's employees in resolving your issues</span>
+                        <select class="js_rating" name="rating">
+                          <option value="1">1</option>
+                          <option value="2" selected="selected">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </li>
+                      <li>
+                        <span  class="rt-tlt">Evaluate the level of competence and professionalism of our employees</span>
+                        <select class="js_rating" name="rating">
+                          <option value="1">1</option>
+                          <option value="2" selected="selected">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <input type="text" id="feed57" title="fill in this field" class="input-field">
+                      <label for="feed57">Please enter the name of the employee whom you addressed your question</label>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <input type="text" id="feed58" title="fill in this field" class="input-field" >
+                      <label for="feed58">Your suggestions and recommendations for improvement of our work</label>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <div class="input-anim">
+                      <textarea maxlength="2000" title="fill in this field" id="feed59" class="input-field"></textarea>
+                      <label for="feed59">Message<sup></sup></label>
+                    </div>
+                  </div>
+                  <div class="file-field clearfix">
+                    <div class="file">
+                      <span class="news-window_close remove-file js_remove_file"></span>
+                      <input type="file" multiple id="file8">
+                      <label for="file8" class="wave-effect">UPLOAD THE FILE</label>
+                    </div>
+                    <div class="name-file">file not chosen</div>
+                    <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                  </div>
+                  <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                  <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                  <div class="check-field privacy-policy">
+                    <div class="check">
+                      <input type="checkbox" id="check8" >
+                      <label for="check8">I accept the privacy policy </label>
+                    </div>
+                    <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                  </div>
+                  <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                  <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+                </form>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="contactSecurity" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading">Сontact Security</div>
+            <div class="modal-form">
+              <form action="#" class="js_validate">
+                <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
+                <div class="form-field">
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sec1" title="fill in this field"  class="input-field" required>
+                      <label for="sec1">first Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-anim">
+                      <input type="text" id="sec2" title="fill in this field" class="input-field" required>
+                      <label for="sec2">Last Name <sup>*</sup></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="email" id="sec3" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="sec3">EMAIL <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field visible" >
+                  <div class="input-anim" >
+                    <input type="tel" id="sec4" title="fill in this field" class="input-field">
+                    <label for="sec4" class="tel">TEL</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="rad-box">
+                    <label class="rad-head">Already our client? <sup>*</sup></label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio11">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio11" >No</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sec6" title="fill in this field" class="input-field" required>
+                    <label for="sec6">Company   <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="sec5" title="fill in this field" class="input-field" required>
+                    <label for="sec5">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="sec7" class="input-field" required></textarea>
+                    <label for="sec7">MESSAGE     <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="file-field clearfix">
+                  <div class="file">
+                    <span class="news-window_close remove-file js_remove_file"></span>
+                    <input type="file" multiple id="file9">
+                    <label for="file9" class="wave-effect">UPLOAD THE FILE</label>
+                  </div>
+                  <div class="name-file">file not chosen</div>
+                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+                </div>
+                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+                <div class="check-field privacy-policy">
+                  <div class="check">
+                    <input type="checkbox" id="check9" >
+                    <label for="check9">I accept the privacy policy </label>
+                  </div>
+                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+                </div>
+                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thank" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span class="news-window_close"  data-dismiss="modal"></span>
+          <div class="modal-body">
+            <div class="modal-heading text-center">Thank You! </div>
+            <div class="modal-form text-center">
+              Your message has been successfully sent.
+              <span class="butt-close-butt"  data-dismiss="modal">Ok</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
   
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/swiper.min.css">
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/icon.css">
+  <link rel="stylesheet" property="stylesheet" type="text/css" href="css/intlTelInput.css">
+  <link rel="stylesheet" property="stylesheet" type="text/css" href="css/bars-movie.css">
+  <link rel="stylesheet" property="stylesheet" type="text/css" href="css/bootstrap-select.css">
+  <link rel="stylesheet" property="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/classList.min.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript"  src="js/swiper.min.js"></script>
   <script type="text/javascript"  src="js/bootstrap.min.js"></script>
   <script type="text/javascript"  src="js/TweenMax.min.js"></script>
-  <script type="text/javascript"  src="js/inputmask.js"></script>
   <script type="text/javascript"  src="js/jquery.lettering.js"></script>
+  <script type="text/javascript"  src="js/intlTelInput.min.js"></script>
+  <script type="text/javascript"  src="js/jquery.nav.min.js"></script>
+  <script type="text/javascript"  src="js/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript"  src="js/jquery.barrating.min.js"></script>
+  <script type="text/javascript"  src="js/count-to.js"></script>
+  <script type="text/javascript"  src="js/appear.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script> 
+  <script type="text/javascript"  src="js/bootstrap-select.min.js"></script>
   <script type="text/javascript"  src="js/main.js"></script>
 </body>
 </html>
