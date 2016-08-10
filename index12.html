@@ -108,7 +108,7 @@
             <li><a href="#" data-hover="CUSTOMER PORTAL">CUSTOMER PORTAL</a></li>
             <li><a href="#" data-hover="Global site">Global site </a></li>
             <li class="laung-drop">
-              <span>EN</span>
+              <span>ENG</span>
               <ul class="laung-dropdown-content">
                 <li><a href="#" data-hover="РУС">РУС</a></li>
                 <!-- <li><a href="#" data-hover="УКР">УКР</a></li> -->
@@ -2425,7 +2425,7 @@
                 <li class="lst-sub"><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="PUSH">PUSH </a></li>
                 <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="VOIP">VOIP </a></li>
                 <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="SIGNALING">SIGNALING </a></li>
-                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="GRX  FIREWALL">GRX  FIREWALL</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#requestModal" data-hover="GRX  FIREWALL">GRX, FIREWALL</a></li>
               </ul>
               <a href="#" data-hover="REQUEST INFO" class="request-info" data-toggle="modal" data-target="#requestModal">REQUEST INFO</a>
             </div>
@@ -3106,7 +3106,7 @@
           </ul>
         </div>
         <div class="col-xs-3">
-          <div class="foot-head">  СONTACT US</div>
+          <div class="foot-head foot-head-a" data-toggle="modal" data-target="#contactUs">  СONTACT US</div>
           <ul class="foot-nav">
             <li><a href="mailto:info@gms-worldwide.com" data-hover="Email: info@gms-worldwide.com">Email: info@gms-worldwide.com</a></li>
             <li><a href="tel:+41415446200" data-hover="Tel.: +41 41 544 6200">Tel.: +41 41 544 6200</a></li>
@@ -3129,905 +3129,746 @@
   </footer>
   <!-- FOOTER SECTION -->
   <div class="modal fade" id="contactUs" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Contact us</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" title="fill in this field" class="input-field" id="cont10" required>
-                      <label for="cont10">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="cont20" title="fill in this field" class="input-field" required>
-                      <label for="cont20">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-field">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Contact us</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="email" id="cont30" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="cont30">EMAIL <sup>*</sup></label>
+                    <input type="text" title="fill in this field" class="input-field" id="cont10" required>
+                    <label for="cont10">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="cont0" title="fill in this field" class="input-field">
-                    <label for="cont0" class="tel">TEL</label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio27">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio27">No</label>
-                  </div>
-                </div>
-                <div class="form-field select-field visible">
-                    <!-- <label  class="rad-head">Send to:</label> -->
-                    <div class="select">
-                      <select class="selectpicker" name="sel">
-                        <option value="Send to:" selected disabled>Ask:</option>
-                        <option value="Sales">Sales</option>
-                        <option value="PR">PR</option>
-                        <option value="HR">HR</option>
-                        <option value="Security">Security</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="text" id="cont47" title="fill in this field" class="input-field" required>
-                    <label for="cont47">Company   <sup>*</sup></label>
+                    <input type="text" id="cont20" title="fill in this field" class="input-field" required>
+                    <label for="cont20">Last Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="cont40" title="fill in this field" class="input-field" required>
-                    <label for="cont40">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="cont30" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="cont30">EMAIL <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" id="cont60" title="fill in this field" class="input-field" required></textarea>
-                    <label for="cont60">MESSAGE     <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="cont0" title="fill in this field" class="input-field">
+                  <label for="cont0" class="tel">TEL</label>
                 </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple title="fill in this field" id="file25">
-                    <label for="file25" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label "><input type="radio" data-rad="yes" name="radio27" >Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio27" >No</label>
                 </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox"  id="check19">
-                    <label for="check19">I accept the privacy policy </label>
+              </div>
+              <div class="form-field select-field visible">
+                  <!-- <label  class="rad-head">Send to:</label> -->
+                  <div class="select">
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
+                      <option value="Sales">Sales</option>
+                      <option value="PR">PR</option>
+                      <option value="HR">HR</option>
+                      <option value="Security">Security</option>
+                    </select>
                   </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="cont47" title="fill in this field" class="input-field" required>
+                  <label for="cont47">Company   <sup>*</sup></label>
                 </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
-      
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">CONTACT HR</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">to send your CV or inquiry fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="inp1" title="fill in this field"  class="input-field" required>
-                      <label for="inp1">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="inp2" title="fill in this field" class="input-field" required>
-                      <label for="inp2">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="cont40" title="fill in this field" class="input-field" required>
+                  <label for="cont40">COUNTRY  <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="email" id="inp3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="inp3">EMAIL <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" id="cont60" title="fill in this field" class="input-field" required></textarea>
+                  <label for="cont60">MESSAGE     <sup>*</sup></label>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="tel" title="fill in this field" class="input-field">
-                    <label for="tel" class="tel">TEL</label>
-                  </div>
+              </div>
+              <div class="check-field">
+                <div class="check">
+                  <input type="checkbox"  id="check22">
+                  <label for="check22">You are allowed to use my notes in all marketing materials of GMS.</label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="inp4" title="fill in this field" class="input-field" required>
-                    <label for="inp4">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple title="fill in this field" id="file25">
+                  <label for="file25" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="inp5" title="fill in this field" class="input-field" required>
-                    <label for="inp5">Vacancy   <sup>*</sup></label>
-                  </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox"  id="check19">
+                  <label for="check19">I accept the privacy policy </label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="inp6" class="input-field" required></textarea>
-                    <label for="inp6">MESSAGE     <sup>*</sup></label>
-                  </div>
-                </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file">
-                    <label for="file" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
-                </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox" id="check2">
-                    <label for="check2">I accept the privacy policy </label>
-                  </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
-                </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt">SuBMIT</button>
-              </form>
-            </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Request info</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text"  class="input-field" id="inp10" title="fill in this field" required>
-                      <label for="inp10">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="inp20" class="input-field" title="fill in this field" required>
-                      <label for="inp20">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-field">
+  </div> 
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+    
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">CONTACT HR</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">to send your CV or inquiry fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="email" id="inp30" class="input-field" title="fill in this field" data-validate="email" required>
-                    <label for="inp30">EMAIL <sup>*</sup></label>
+                    <input type="text" id="inp1" title="fill in this field"  class="input-field" required>
+                    <label for="inp1">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="tel0" class="input-field" title="fill in this field">
-                    <label for="tel0" class="tel">TEL</label> 
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio17">Yes</label>
-                    <label class="rad-label"><input type="radio" data-rad="no" name="radio17" >No</label>
-                  </div>
-                </div>
-                <div class="form-field select-field visible">
-                    <!-- <label  class="rad-head">Send to:</label> -->
-                    <div class="select">
-                      <select class="selectpicker" name="sel">
-                        <option value="Send to:" selected disabled>Ask:</option>
-                        <option value="Sales">Sales</option>
-                        <option value="PR">PR</option>
-                        <option value="HR">HR</option>
-                        <option value="Security">Security</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="text" id="inp41" title="fill in this field" class="input-field" required>
-                    <label for="inp41">Company   <sup>*</sup></label>
+                    <input type="text" id="inp2" title="fill in this field" class="input-field" required>
+                    <label for="inp2">Last Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="inp40" class="input-field" title="fill in this field" required>
-                    <label for="inp4">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="inp3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="inp3">EMAIL <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" id="inp60" class="input-field" title="fill in this field" required></textarea>
-                    <label for="inp60">MESSAGE     <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="tel" title="fill in this field" class="input-field">
+                  <label for="tel" class="tel">TEL</label>
                 </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file2">
-                    <label for="file2" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file name-file-2">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="inp4" title="fill in this field" class="input-field" required>
+                  <label for="inp4">COUNTRY  <sup>*</sup></label>
                 </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox" id="check1" >
-                    <label for="check1">I accept the privacy policy </label>
-                  </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="inp5" title="fill in this field" class="input-field" required>
+                  <label for="inp5">Vacancy   <sup>*</sup></label>
                 </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt">SuBMIT</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <div class="modal fade" id="customerSupport" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Сustomer Support </div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">We strive to provide you with the best service possible.<br> To receive more information about our products and services, fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="sup1" title="fill in this field"  class="input-field" required>
-                      <label for="sup1">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="sup2" title="fill in this field" class="input-field" required>
-                      <label for="sup2">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="inp6" class="input-field" required></textarea>
+                  <label for="inp6">MESSAGE     <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="email" id="sup3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="sup3">EMAIL <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file">
+                  <label for="file" class="wave-effect">UPLOAD THE FILE</label>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="sup4" title="fill in this field" class="input-field">
-                    <label for="sup4" class="tel">TEL</label>
-                  </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check2">
+                  <label for="check2">I accept the privacy policy </label>
                 </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio2">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio2" >No</label>
-                  </div>
-                </div>
-                <div class="form-field select-field visible">
-                    <!-- <label  class="rad-head">Send to:</label> -->
-                    <div class="select">
-                      <select class="selectpicker" name="sel">
-                        <option value="Send to:" selected disabled>Ask:</option>
-                        <option value="Sales">Sales</option>
-                        <option value="PR">PR</option>
-                        <option value="HR">HR</option>
-                        <option value="Security">Security</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="sup6" title="fill in this field" class="input-field" required>
-                    <label for="sup6">Company   <sup>*</sup></label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="sup5" title="fill in this field" class="input-field" required>
-                    <label for="sup5">COUNTRY  <sup>*</sup></label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="sup7" class="input-field" required></textarea>
-                    <label for="sup7">MESSAGE     <sup>*</sup></label>
-                  </div>
-                </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file3">
-                    <label for="file3" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
-                </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox"  id="check3" >
-                    <label for="check3">I accept the privacy policy </label>
-                  </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
-                </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-              </form>
-            </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="contactSales" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Contact Sales</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To receive more information about our products and services, fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="sal1" title="fill in this field"  class="input-field" required>
-                      <label for="sal1">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="sal2" title="fill in this field" class="input-field" required>
-                      <label for="sal2">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-field">
+  </div>
+  <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Request info</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="email" id="sal3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="sal3">EMAIL <sup>*</sup></label>
+                    <input type="text"  class="input-field" id="inp10" title="fill in this field" required>
+                    <label for="inp10">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="sal4" title="fill in this field" class="input-field">
-                    <label for="sal4" class="tel">TEL</label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio5">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio5" >No</label>
-                  </div>
-                </div>
-                <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="text" id="sal6" title="fill in this field" class="input-field" required>
-                    <label for="sal6">Company   <sup>*</sup></label>
+                    <input type="text" id="inp20" class="input-field" title="fill in this field" required>
+                    <label for="inp20">Last Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="sal5" title="fill in this field" class="input-field" required>
-                    <label for="sal5">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="inp30" class="input-field" title="fill in this field" data-validate="email" required>
+                  <label for="inp30">EMAIL <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="sal7" class="input-field" required></textarea>
-                    <label for="sal7">MESSAGE     <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="tel0" class="input-field" title="fill in this field">
+                  <label for="tel0" class="tel">TEL</label> 
                 </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file4">
-                    <label for="file4" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio17">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio17" >No</label>
                 </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox" id="check4" >
-                    <label for="check4">I accept the privacy policy </label>
+              </div>
+              <div class="form-field select-field visible">
+                  <!-- <label  class="rad-head">Send to:</label> -->
+                  <div class="select">
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
+                      <option value="Sales">Sales</option>
+                      <option value="PR">PR</option>
+                      <option value="HR">HR</option>
+                      <option value="Security">Security</option>
+                    </select>
                   </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="inp41" title="fill in this field" class="input-field" required>
+                  <label for="inp41">Company   <sup>*</sup></label>
                 </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-              </form>
-            </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="inp40" class="input-field" title="fill in this field" required>
+                  <label for="inp4">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" id="inp60" class="input-field" title="fill in this field" required></textarea>
+                  <label for="inp60">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file2">
+                  <label for="file2" title="UPLOAD THE FILE" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file name-file-2">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check1" >
+                  <label for="check1">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="contactPR" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Contact PR</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="pr1" title="fill in this field"  class="input-field" required>
-                      <label for="pr1">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="pr2" title="fill in this field" class="input-field" required>
-                      <label for="pr2">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-field">
+  </div> 
+  <div class="modal fade" id="customerSupport" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Сustomer Support </div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">We strive to provide you with the best service possible.<br> To receive more information about our products and services, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="email" id="pr3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="pr3">EMAIL <sup>*</sup></label>
+                    <input type="text" id="sup1" title="fill in this field"  class="input-field" required>
+                    <label for="sup1">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="pr4" title="fill in this field" class="input-field">
-                    <label for="pr4" class="tel">TEL</label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio6">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio6" >No</label>
-                  </div>
-                </div>
-                <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="text" id="pr6" title="fill in this field" class="input-field" required>
-                    <label for="pr6">Company   <sup>*</sup></label>
+                    <input type="text" id="sup2" title="fill in this field" class="input-field" required>
+                    <label for="sup2">Last Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="pr5" title="fill in this field" class="input-field" required>
-                    <label for="pr5">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="sup3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="sup3">EMAIL <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="pr7" class="input-field" required></textarea>
-                    <label for="pr7">MESSAGE     <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="sup4" title="fill in this field" class="input-field">
+                  <label for="sup4" class="tel">TEL</label>
                 </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file5">
-                    <label for="file5" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio2">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio2" >No</label>
                 </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox" id="check5" >
-                    <label for="check5">I accept the privacy policy </label>
+              </div>
+              <div class="form-field select-field visible">
+                  <!-- <label  class="rad-head">Send to:</label> -->
+                  <div class="select">
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
+                      <option value="Sales">Sales</option>
+                      <option value="PR">PR</option>
+                      <option value="HR">HR</option>
+                      <option value="Security">Security</option>
+                    </select>
                   </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sup6" title="fill in this field" class="input-field" required>
+                  <label for="sup6">Company   <sup>*</sup></label>
                 </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-              </form>
-            </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sup5" title="fill in this field" class="input-field" required>
+                  <label for="sup5">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="sup7" class="input-field" required></textarea>
+                  <label for="sup7">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file3">
+                  <label for="file3" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox"  id="check3" >
+                  <label for="check3">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="contactToCeo" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Сontact to CEO</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To contact our CEO please complete the following form. Your opinion is very important to us!</div>
-                <div class="form-field">
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="ceo1" title="fill in this field" class="input-field" required>
-                      <label for="ceo1">first Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-anim">
-                      <input type="text" id="ceo2" title="fill in this field" class="input-field" required>
-                      <label for="ceo2">Last Name <sup>*</sup></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-field">
+  </div>
+  <div class="modal fade" id="contactSales" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Contact Sales</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To receive more information about our products and services, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="email" id="ceo3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="ceo3">EMAIL <sup>*</sup></label>
+                    <input type="text" id="sal1" title="fill in this field"  class="input-field" required>
+                    <label for="sal1">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field visible" >
-                  <div class="input-anim" >
-                    <input type="tel" id="ceo4" title="fill in this field" class="input-field">
-                    <label for="ceo4" class="tel">TEL</label>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <div class="rad-box">
-                    <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio8">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio8" >No</label>
-                  </div>
-                </div>
-                <div class="form-field">
+                <div class="col">
                   <div class="input-anim">
-                    <input type="text" id="ceo6" title="fill in this field" class="input-field" required>
-                    <label for="ceo6">Company   <sup>*</sup></label>
+                    <input type="text" id="sal2" title="fill in this field" class="input-field" required>
+                    <label for="sal2">Last Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <input type="text" id="ceo5" title="fill in this field" class="input-field" required>
-                    <label for="ceo5">COUNTRY  <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="sal3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="sal3">EMAIL <sup>*</sup></label>
                 </div>
-                <div class="form-field">
-                  <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="ceo7" class="input-field" required></textarea>
-                    <label for="ceo7">MESSAGE     <sup>*</sup></label>
-                  </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="sal4" title="fill in this field" class="input-field">
+                  <label for="sal4" class="tel">TEL</label>
                 </div>
-                <div class="file-field clearfix">
-                  <div class="file">
-                    <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file6">
-                    <label for="file6" class="wave-effect">UPLOAD THE FILE</label>
-                  </div>
-                  <div class="name-file">file not chosen</div>
-                  <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio5">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio5" >No</label>
                 </div>
-                <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                <div class="check-field privacy-policy">
-                  <div class="check">
-                    <input type="checkbox" id="check6" >
-                    <label for="check6">I accept the privacy policy </label>
-                  </div>
-                  <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sal6" title="fill in this field" class="input-field" required>
+                  <label for="sal6">Company   <sup>*</sup></label>
                 </div>
-                <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-              </form>
-            </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sal5" title="fill in this field" class="input-field" required>
+                  <label for="sal5">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="sal7" class="input-field" required></textarea>
+                  <label for="sal7">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file4">
+                  <label for="file4" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check4" >
+                  <label for="check4">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade"  id="leaveFeedback" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Leave feedback</div>
-            <div class="modal-form">
-             
-                <div class="form-head">To leave feedback, fill in the following form. Your opinion is very important to us!</div>
-                <div class="form-field">
-                  <div class="rad-box select-field">
-                    <!-- <label class="rad-head">Topic</label> -->
-                    <div class="select">
-                      <select name="sel" class="selectpicker data-form">
-                        <option value="Topic" disabled="" selected="">Topic</option>
-                        <option data-form="1" value="Question">Question</option>
-                        <option data-form="1" value="Thank you message">Thank you message</option>
-                        <option data-form="2" value="Evaluate the Quality of Service">Evaluate the Quality of Service</option>
-                      </select>
-                    </div>
+  </div>
+  <div class="modal fade" id="contactPR" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Contact PR</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="pr1" title="fill in this field"  class="input-field" required>
+                    <label for="pr1">first Name <sup>*</sup></label>
                   </div>
                 </div>
-                <div class="form-box" data-form="1">
-                  <form action="#" class="js_validate">
-                    <div class="form-field">
-                      <div class="col">
-                        <div class="input-anim">
-                          <input type="text" title="fill in this field" id="feed1"  class="input-field" required>
-                          <label for="feed1">first Name <sup>*</sup></label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="input-anim">
-                          <input type="text" title="fill in this field" id="feed2" class="input-field" required>
-                          <label for="feed2">Last Name <sup>*</sup></label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-field">
-                      <div class="input-anim">
-                        <input type="email" title="fill in this field" id="feed3" class="input-field" data-validate="email" required>
-                        <label for="feed3">EMAIL <sup>*</sup></label>
-                      </div>
-                    </div>
-                    <div class="form-field visible" >
-                      <div class="input-anim" >
-                        <input type="tel" title="fill in this field" id="feed4" class="input-field">
-                        <label for="feed4" class="tel">TEL</label>
-                      </div>
-                    </div>
-                    <div class="form-field">
-                      <div class="rad-box">
-                        <label class="rad-head">Already our client? <sup>*</sup></label>
-                        <label class="rad-label"><input type="radio" data-rad="yes" name="radio9">Yes</label>
-                        <label class="rad-label "><input type="radio" data-rad="no" name="radio9" >No</label>
-                      </div>
-                    </div>
-                    <div class="form-field select-field visible">
-                        <div class="select">
-                          <select class="selectpicker" name="sel">
-                            <option value="Send to:" selected disabled>Send to:</option>
-                            <option value="Sales">Sales</option>
-                            <option value="PR">PR</option>
-                            <option value="HR">HR</option>
-                            <option value="Security">Security</option>
-                          </select>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                      <div class="input-anim">
-                        <input type="text" title="fill in this field" id="feed6" class="input-field" required>
-                        <label for="feed6">Company   <sup>*</sup></label>
-                      </div>
-                    </div>
-                    <div class="form-field">
-                      <div class="input-anim">
-                        <input type="text" title="fill in this field" id="feed5" class="input-field" required>
-                        <label for="feed5">COUNTRY  <sup>*</sup></label>
-                      </div>
-                    </div>
-                    <div class="form-field">
-                      <div class="input-anim">
-                        <textarea maxlength="2000" title="fill in this field"id="feed7" class="input-field" required></textarea>
-                        <label for="feed7">MESSAGE     <sup>*</sup></label>
-                      </div>
-                    </div>
-                    <div class="file-field clearfix">
-                      <div class="file">
-                        <span class="news-window_close remove-file js_remove_file"></span>
-                        <input type="file" multiple id="file7">
-                        <label for="file7" class="wave-effect">UPLOAD THE FILE</label>
-                      </div>
-                      <div class="name-file">file not chosen</div>
-                      <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
-                    </div>
-                    <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
-                    <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
-                    <div class="check-field privacy-policy">
-                      <div class="check">
-                        <input type="checkbox" id="check7" >
-                        <label for="check7">I accept the privacy policy </label>
-                      </div>
-                      <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
-                    </div>
-                    <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
-                    <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
-                  </form>
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="pr2" title="fill in this field" class="input-field" required>
+                    <label for="pr2">Last Name <sup>*</sup></label>
+                  </div>
                 </div>
-                <div class="form-box" data-form="2">
-                  <form action="#" class="js_validate">
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="pr3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="pr3">EMAIL <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="pr4" title="fill in this field" class="input-field">
+                  <label for="pr4" class="tel">TEL</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio6">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio6" >No</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="pr6" title="fill in this field" class="input-field" required>
+                  <label for="pr6">Company   <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="pr5" title="fill in this field" class="input-field" required>
+                  <label for="pr5">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="pr7" class="input-field" required></textarea>
+                  <label for="pr7">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file5">
+                  <label for="file5" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check5" >
+                  <label for="check5">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="contactToCeo" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Сontact to CEO</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To contact our CEO please complete the following form<br> Your opinion is very important to us!</div>
+              <div class="form-field">
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="ceo1" title="fill in this field" class="input-field" required>
+                    <label for="ceo1">first Name <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="ceo2" title="fill in this field" class="input-field" required>
+                    <label for="ceo2">Last Name <sup>*</sup></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="ceo3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="ceo3">EMAIL <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="ceo4" title="fill in this field" class="input-field">
+                  <label for="ceo4" class="tel">TEL</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio8">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio8" >No</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="ceo6" title="fill in this field" class="input-field" required>
+                  <label for="ceo6">Company   <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="ceo5" title="fill in this field" class="input-field" required>
+                  <label for="ceo5">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="ceo7" class="input-field" required></textarea>
+                  <label for="ceo7">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="check-field">
+                <div class="check">
+                  <input type="checkbox"  id="check33">
+                  <label for="check33">You are allowed to use my notes in all marketing materials of GMS.</label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file6">
+                  <label for="file6" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check6" >
+                  <label for="check6">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade"  id="leaveFeedback" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Leave feedback</div>
+          <div class="modal-form">
+           
+              <div class="form-head">To leave feedback, fill in the following form<br> Your opinion is very important to us!</div>
+              <div class="form-field">
+                <div class="rad-box select-field">
+                  <!-- <label class="rad-head">Topic</label> -->
+                  <div class="select">
+                    <select name="sel" class="selectpicker data-form">
+                      <option value="Topic" disabled="" selected="">Topic</option>
+                      <option data-form="1" value="Question">Question</option>
+                      <option data-form="1" value="Thank you message">Thank you message</option>
+                      <option data-form="2" value="Evaluate the Quality of Service">Evaluate the Quality of Service</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-box" data-form="1">
+                <form action="#" class="js_validate">
                   <div class="form-field">
                     <div class="col">
                       <div class="input-anim">
-                        <input type="text" id="feed12" title="fill in this field" class="input-field" required>
-                        <label for="feed12">first Name <sup>*</sup></label>
+                        <input type="text" title="fill in this field" id="feed1"  class="input-field" required>
+                        <label for="feed1">first Name <sup>*</sup></label>
                       </div>
                     </div>
                     <div class="col">
                       <div class="input-anim">
-                        <input type="text" id="feed22" title="fill in this field" class="input-field" required>
-                        <label for="feed22">Last Name <sup>*</sup></label>
+                        <input type="text" title="fill in this field" id="feed2" class="input-field" required>
+                        <label for="feed2">Last Name <sup>*</sup></label>
                       </div>
                     </div>
                   </div>
                   <div class="form-field">
                     <div class="input-anim">
-                      <input type="email" id="feed32" title="fill in this field" class="input-field" data-validate="email" required>
-                      <label for="feed32">EMAIL <sup>*</sup></label>
+                      <input type="email" title="fill in this field" id="feed3" class="input-field" data-validate="email" required>
+                      <label for="feed3">EMAIL <sup>*</sup></label>
                     </div>
                   </div>
                   <div class="form-field visible" >
                     <div class="input-anim" >
-                      <input type="tel" id="feed42" title="fill in this field" class="input-field">
-                      <label for="feed42" class="tel">TEL</label>
+                      <input type="tel" title="fill in this field" id="feed4" class="input-field">
+                      <label for="feed4" class="tel">TEL</label>
                     </div>
                   </div>
                   <div class="form-field">
                     <div class="rad-box">
                       <label class="rad-head">Already our client? <sup>*</sup></label>
-                      <label class="rad-label"><input type="radio" data-rad="yes" name="radio44">Yes</label>
-                      <label class="rad-label "><input type="radio" data-rad="no" name="radio44"  >No</label>
+                      <label class="rad-label"><input type="radio" data-rad="yes" name="radio9">Yes</label>
+                      <label class="rad-label "><input type="radio" data-rad="no" name="radio9" >No</label>
                     </div>
                   </div>
-                  <div class="form-field select-field select-other visible">
-                      <!-- <label  class="rad-head">Send to:</label> -->
+                  <div class="form-field select-field visible">
                       <div class="select">
-                        <select class="selectpicker" name="sel">
-                          <option value="Send to:" selected disabled>Evaluate:</option>
-                          <option value="Company">Company</option>
+                        <select class="selectpicker" name="sel" required>
+                          <option value="" selected disabled>Send to:</option>
                           <option value="Sales">Sales</option>
                           <option value="PR">PR</option>
                           <option value="HR">HR</option>
                           <option value="Security">Security</option>
-                          <option value="Other" data-select="other">Other</option>
                         </select>
                       </div>
                   </div>
-                  <div class="form-field form-other">
+                  <div class="form-field">
                     <div class="input-anim">
-                      <textarea type="text" id="feed72" title="fill in this field" class="input-field" required></textarea>
-                      <label for="feed72">Please, specify <sup>*</sup></label>
+                      <input type="text" title="fill in this field" id="feed6" class="input-field" required>
+                      <label for="feed6">Company   <sup>*</sup></label>
                     </div>
                   </div>
                   <div class="form-field">
                     <div class="input-anim">
-                      <input type="text" id="feed62" title="fill in this field" class="input-field" required>
-                      <label for="feed62">Company   <sup>*</sup></label>
+                      <input type="text" title="fill in this field" id="feed5" class="input-field" required>
+                      <label for="feed5">COUNTRY  <sup>*</sup></label>
                     </div>
                   </div>
                   <div class="form-field">
                     <div class="input-anim">
-                      <input type="text" id="feed52" title="fill in this field" class="input-field" required>
-                      <label for="feed52">COUNTRY  <sup>*</sup></label>
+                      <textarea maxlength="2000" title="fill in this field"id="feed7" class="input-field" required></textarea>
+                      <label for="feed7">MESSAGE     <sup>*</sup></label>
                     </div>
                   </div>
-                  <div class="rait-field">
-                    <span class="tt-upp">Please fill the questionnaire below</span>
-                    <ul>
-                      <li>
-                        <div class="br-capt">
-                          <div class="br-capt-spn">
-                            <span>BAD</span>
-                            <span>GOOD</span>
-                            <span>EXCELLENT</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="clearfix">
-                        <span class="rt-tlt">Are you satisfied by the cooperation as a whole?</span>
-                        <!-- <input class="js_rating" data-show-clear="false" data-show-caption="false"> -->
-                          <select class="js_rating" name="rating">
-                            <option value="1">1</option>
-                            <option value="2" selected="selected">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                          </select>
-                      </li>
-                      <li>
-                        <span  class="rt-tlt">How much are you willing to recommend us to your friends, partners?</span>
-                        <select class="js_rating" name="rating">
-                          <option value="1">1</option>
-                          <option value="2" selected="selected">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                      </li>
-                      <li>
-                        <span  class="rt-tlt">Does our solution/offer meet your expectations?</span>
-                        <select class="js_rating" name="rating">
-                          <option value="1">1</option>
-                          <option value="2" selected="selected">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                      </li>
-                      <li>
-                        <span  class="rt-tlt">Evaluate the degree of interest of the Company's employees in resolving your issues</span>
-                        <select class="js_rating" name="rating">
-                          <option value="1">1</option>
-                          <option value="2" selected="selected">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                      </li>
-                      <li>
-                        <span  class="rt-tlt">Evaluate the level of competence and professionalism of our employees</span>
-                        <select class="js_rating" name="rating">
-                          <option value="1">1</option>
-                          <option value="2" selected="selected">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="form-field">
-                    <div class="input-anim">
-                      <input type="text" id="feed57" title="fill in this field" class="input-field">
-                      <label for="feed57">Please enter the name of the employee whom you addressed your question</label>
-                    </div>
-                  </div>
-                  <div class="form-field">
-                    <div class="input-anim">
-                      <input type="text" id="feed58" title="fill in this field" class="input-field" >
-                      <label for="feed58">Your suggestions and recommendations for improvement of our work</label>
-                    </div>
-                  </div>
-                  <div class="form-field">
-                    <div class="input-anim">
-                      <textarea maxlength="2000" title="fill in this field" id="feed59" class="input-field"></textarea>
-                      <label for="feed59">Message<sup></sup></label>
+                  <div class="check-field">
+                    <div class="check">
+                      <input type="checkbox"  id="check23">
+                      <label for="check23">You are allowed to use my notes in all marketing materials of GMS.</label>
                     </div>
                   </div>
                   <div class="file-field clearfix">
                     <div class="file">
                       <span class="news-window_close remove-file js_remove_file"></span>
-                      <input type="file" multiple id="file8">
-                      <label for="file8" class="wave-effect">UPLOAD THE FILE</label>
+                      <input type="file" multiple id="file7">
+                      <label for="file7" class="wave-effect">UPLOAD THE FILE</label>
                     </div>
                     <div class="name-file">file not chosen</div>
                     <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
@@ -4036,86 +3877,181 @@
                   <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
                   <div class="check-field privacy-policy">
                     <div class="check">
-                      <input type="checkbox" id="check8" >
-                      <label for="check8">I accept the privacy policy </label>
+                      <input type="checkbox" id="check7" >
+                      <label for="check7">I accept the privacy policy </label>
                     </div>
                     <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
                   </div>
                   <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
                   <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
                 </form>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="contactSecurity" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading">Сontact Security</div>
-            <div class="modal-form">
-              <form action="#" class="js_validate">
-                <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
+              </div>
+              <div class="form-box" data-form="2">
+                <form action="#" class="js_validate">
                 <div class="form-field">
                   <div class="col">
                     <div class="input-anim">
-                      <input type="text" id="sec1" title="fill in this field"  class="input-field" required>
-                      <label for="sec1">first Name <sup>*</sup></label>
+                      <input type="text" id="feed12" title="fill in this field" class="input-field" required>
+                      <label for="feed12">first Name <sup>*</sup></label>
                     </div>
                   </div>
                   <div class="col">
                     <div class="input-anim">
-                      <input type="text" id="sec2" title="fill in this field" class="input-field" required>
-                      <label for="sec2">Last Name <sup>*</sup></label>
+                      <input type="text" id="feed22" title="fill in this field" class="input-field" required>
+                      <label for="feed22">Last Name <sup>*</sup></label>
                     </div>
                   </div>
                 </div>
                 <div class="form-field">
                   <div class="input-anim">
-                    <input type="email" id="sec3" title="fill in this field" class="input-field" data-validate="email" required>
-                    <label for="sec3">EMAIL <sup>*</sup></label>
+                    <input type="email" id="feed32" title="fill in this field" class="input-field" data-validate="email" required>
+                    <label for="feed32">EMAIL <sup>*</sup></label>
                   </div>
                 </div>
                 <div class="form-field visible" >
                   <div class="input-anim" >
-                    <input type="tel" id="sec4" title="fill in this field" class="input-field">
-                    <label for="sec4" class="tel">TEL</label>
+                    <input type="tel" id="feed42" title="fill in this field" class="input-field">
+                    <label for="feed42" class="tel">TEL</label>
                   </div>
                 </div>
                 <div class="form-field">
                   <div class="rad-box">
                     <label class="rad-head">Already our client? <sup>*</sup></label>
-                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio11">Yes</label>
-                    <label class="rad-label "><input type="radio" data-rad="no" name="radio11" >No</label>
+                    <label class="rad-label"><input type="radio" data-rad="yes" name="radio44">Yes</label>
+                    <label class="rad-label "><input type="radio" data-rad="no" name="radio44"  >No</label>
+                  </div>
+                </div>
+                <div class="form-field select-field select-other visible">
+                    <!-- <label  class="rad-head">Send to:</label> -->
+                    <div class="select">
+                      <select class="selectpicker" name="sel" required>
+                        <option value="" selected disabled>Evaluate:</option>
+                        <option value="Company">Company</option>
+                        <option value="Sales">Sales</option>
+                        <option value="PR">PR</option>
+                        <option value="HR">HR</option>
+                        <option value="Security">Security</option>
+                        <option value="Other" data-select="other">Other</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-field form-other">
+                  <div class="input-anim">
+                    <textarea type="text" id="feed72" title="fill in this field" class="input-field" required></textarea>
+                    <label for="feed72">Please, specify <sup>*</sup></label>
                   </div>
                 </div>
                 <div class="form-field">
                   <div class="input-anim">
-                    <input type="text" id="sec6" title="fill in this field" class="input-field" required>
-                    <label for="sec6">Company   <sup>*</sup></label>
+                    <input type="text" id="feed62" title="fill in this field" class="input-field" required>
+                    <label for="feed62">Company   <sup>*</sup></label>
                   </div>
                 </div>
                 <div class="form-field">
                   <div class="input-anim">
-                    <input type="text" id="sec5" title="fill in this field" class="input-field" required>
-                    <label for="sec5">COUNTRY  <sup>*</sup></label>
+                    <input type="text" id="feed52" title="fill in this field" class="input-field" required>
+                    <label for="feed52">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="check-field">
+                  <div class="check">
+                    <input type="checkbox"  id="check24">
+                    <label for="check24">You are allowed to use my notes in all marketing materials of GMS.</label>
+                  </div>
+                </div>
+                <div class="rait-field">
+                  <span class="tt-upp">Please fill the questionnaire below</span>
+                  <ul>
+                    <li>
+                      <div class="br-capt">
+                        <div class="br-capt-spn">
+                          <span>BAD</span>
+                          <span>GOOD</span>
+                          <span>EXCELLENT</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <span class="rt-tlt">Are you satisfied by the cooperation as a whole?</span>
+                      <!-- <input class="js_rating" data-show-clear="false" data-show-caption="false"> -->
+                        <select class="js_rating" name="rating">
+                          <option value="1">1</option>
+                          <option value="2" selected="selected">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                    </li>
+                    <li>
+                      <span  class="rt-tlt">How much are you willing to recommend us to your friends, partners?</span>
+                      <select class="js_rating" name="rating">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span  class="rt-tlt">Does our solution/offer meet your expectations?</span>
+                      <select class="js_rating" name="rating">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span  class="rt-tlt">Evaluate the degree of interest of the Company's employees in resolving your issues</span>
+                      <select class="js_rating" name="rating">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span  class="rt-tlt">Evaluate the level of competence and professionalism of our employees</span>
+                      <select class="js_rating" name="rating">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <input type="text" id="feed57" title="fill in this field" class="input-field">
+                    <label for="feed57">Please enter the name of the employee whom you addressed your question</label>
                   </div>
                 </div>
                 <div class="form-field">
                   <div class="input-anim">
-                    <textarea maxlength="2000" title="fill in this field" id="sec7" class="input-field" required></textarea>
-                    <label for="sec7">MESSAGE     <sup>*</sup></label>
+                    <input type="text" id="feed58" title="fill in this field" class="input-field" >
+                    <label for="feed58">Your suggestions and recommendations for improvement of our work</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="input-anim">
+                    <textarea maxlength="2000" title="fill in this field" id="feed59" class="input-field"></textarea>
+                    <label for="feed59">Message<sup></sup></label>
                   </div>
                 </div>
                 <div class="file-field clearfix">
                   <div class="file">
                     <span class="news-window_close remove-file js_remove_file"></span>
-                    <input type="file" multiple id="file9">
-                    <label for="file9" class="wave-effect">UPLOAD THE FILE</label>
+                    <input type="file" multiple id="file8">
+                    <label for="file8" class="wave-effect">UPLOAD THE FILE</label>
                   </div>
                   <div class="name-file">file not chosen</div>
                   <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
@@ -4124,33 +4060,121 @@
                 <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
                 <div class="check-field privacy-policy">
                   <div class="check">
-                    <input type="checkbox" id="check9" >
-                    <label for="check9">I accept the privacy policy </label>
+                    <input type="checkbox" id="check8" >
+                    <label for="check8">I accept the privacy policy </label>
                   </div>
                   <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
                 </div>
                 <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
                 <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
               </form>
-            </div>
+              </div>
+            
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="thank" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="news-window_close"  data-dismiss="modal"></span>
-          <div class="modal-body">
-            <div class="modal-heading text-center">Thank You! </div>
-            <div class="modal-form text-center">
-              Your message has been successfully sent.
-              <span class="butt-close-butt"  data-dismiss="modal">Ok</span>
-            </div>
+  </div>
+  <div class="modal fade" id="contactSecurity" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading">Сontact Security</div>
+          <div class="modal-form">
+            <form action="#" class="js_validate">
+              <div class="form-head">To receive more information on the enquiry, fill in the following form</div>
+              <div class="form-field">
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="sec1" title="fill in this field"  class="input-field" required>
+                    <label for="sec1">first Name <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-anim">
+                    <input type="text" id="sec2" title="fill in this field" class="input-field" required>
+                    <label for="sec2">Last Name <sup>*</sup></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="email" id="sec3" title="fill in this field" class="input-field" data-validate="email" required>
+                  <label for="sec3">EMAIL <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field visible" >
+                <div class="input-anim" >
+                  <input type="tel" id="sec4" title="fill in this field" class="input-field">
+                  <label for="sec4" class="tel">TEL</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="rad-box">
+                  <label class="rad-head">Already our client? <sup>*</sup></label>
+                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio11">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="no" name="radio11" >No</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sec6" title="fill in this field" class="input-field" required>
+                  <label for="sec6">Company   <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <input type="text" id="sec5" title="fill in this field" class="input-field" required>
+                  <label for="sec5">COUNTRY  <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="input-anim">
+                  <textarea maxlength="2000" title="fill in this field" id="sec7" class="input-field" required></textarea>
+                  <label for="sec7">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="file-field clearfix">
+                <div class="file">
+                  <span class="news-window_close remove-file js_remove_file"></span>
+                  <input type="file" multiple id="file9">
+                  <label for="file9" class="wave-effect">UPLOAD THE FILE</label>
+                </div>
+                <div class="name-file">file not chosen</div>
+                <div class="info-file">doc / docx / rtf / pdf / txt / odt / jpeg</div>
+              </div>
+              <div class="capcha"><img src="images/capcha.jpg" alt=""></div>
+              <div class="required-field">The fields with <sup>*</sup> are mandatory to send the message</div>
+              <div class="check-field privacy-policy">
+                <div class="check">
+                  <input type="checkbox" id="check9" >
+                  <label for="check9">I accept the privacy policy </label>
+                </div>
+                <div class="hidden-txt">Sorry, without your agreement to process your personal data, we cannot provide you the information according to your request.</div>
+              </div>
+              <div class="bott-form">By completing this form, you are opting in to receive communications from GMS.</div>
+              <button type="submit" class="wave-effect form-butt absl-butt">SuBMIT</button>
+            </form>
           </div>
         </div>
       </div>
-    </div> 
+    </div>
+  </div>
+  <div class="modal fade" id="thank" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <span class="news-window_close"  data-dismiss="modal"></span>
+        <div class="modal-body">
+          <div class="modal-heading text-center">Thank You! </div>
+          <div class="modal-form text-center">
+            Your message has been successfully sent.
+            <span class="butt-close-butt"  data-dismiss="modal">Ok</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
   
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/swiper.min.css">
   <link rel="stylesheet" property="stylesheet" type="text/css" href="css/bootstrap.min.css">

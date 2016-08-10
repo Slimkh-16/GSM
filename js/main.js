@@ -604,8 +604,8 @@ var stylesArray =
     initialize()
   // validate form
   function initialize() {
-    var myLatlng = new google.maps.LatLng(47.043911, 8.304395);
-    var myCenter = new google.maps.LatLng(47.043911, 8.305395);
+    var myLatlng = new google.maps.LatLng(47.171386, 8.513095);
+    var myCenter = new google.maps.LatLng(47.171386, 8.513095);
     var mapOptions = {
       zoom: 15,
       center: myCenter,

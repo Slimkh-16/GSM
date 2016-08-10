@@ -1726,6 +1726,17 @@ a[data-hover]:hover:after, a[data-hover]:hover:before, a[data-hover]:focus:after
   font-family: 'Lato-Light',sans-serif;
 }
 
+.foot-head-a {
+  cursor: pointer;
+  -moz-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -o-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.foot-head-a:hover {
+  color: #0e50f8;
+}
+
 .foot-nav li a, .foot-nav li span {
   font-size: 11px;
   line-height: 13px;
@@ -1960,7 +1971,7 @@ a[data-hover]:hover:after, a[data-hover]:hover:before, a[data-hover]:focus:after
 }
 
 .select-field {
-  padding: 17px 15px 17px 15px !important;
+  padding: 0;
   position: relative;
 }
 .select-field .rad-head {
@@ -1970,6 +1981,17 @@ a[data-hover]:hover:after, a[data-hover]:hover:before, a[data-hover]:focus:after
   width: auto !important;
   display: block !important;
   overflow: hidden;
+  padding: 17px 15px 17px 15px !important;
+  -moz-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -o-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.select-field .bootstrap-select.error {
+  background: rgba(247, 172, 172, 0.5);
+}
+.select-field .bootstrap-select.pass {
+  background: rgba(172, 228, 153, 0.5);
 }
 .select-field .bootstrap-select.btn-group .dropdown-toggle .caret {
   width: 0;
@@ -2024,8 +2046,21 @@ a[data-hover]:hover:after, a[data-hover]:hover:before, a[data-hover]:focus:after
   color: #0e50f8;
 }
 
+.bootstrap-select.btn-group .dropdown-toggle .filter-option:after {
+  content: '*';
+  color: #305af7;
+  font-size: 10px;
+  top: -4px;
+  left: 2px;
+  position: relative;
+}
+
 .bootstrap-select.btn-group .dropdown-menu li.selected a {
   color: #0e50f8;
+}
+
+.select-field.rad-box .dropdown-toggle .filter-option:after {
+  display: none;
 }
 
 .file-field {
@@ -2109,15 +2144,6 @@ a[data-hover]:hover:after, a[data-hover]:hover:before, a[data-hover]:focus:after
 
 .select {
   position: relative;
-}
-.select:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 30px;
-  background: #fff;
 }
 
 .capcha {

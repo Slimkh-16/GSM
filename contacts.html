@@ -102,7 +102,7 @@
             <li><a href="#" data-hover="CUSTOMER PORTAL">CUSTOMER PORTAL</a></li>
             <li><a href="#" data-hover="Global site">Global site </a></li>
             <li class="laung-drop">
-              <span>EN</span>
+              <span>ENG</span>
               <ul class="laung-dropdown-content">
                 <li><a href="#" data-hover="РУС">РУС</a></li>
                 <!-- <li><a href="#" data-hover="УКР">УКР</a></li> -->
@@ -180,7 +180,7 @@
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab2">Sales</a></li>
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab3">PR</a></li>
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab4">HR</a></li>
-            <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab5">Security</a></li>
+<!--             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab5">Security</a></li> -->
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab6">Commercial offers</a></li>
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab7">Leave feedback</a></li>
             <li class="wave-effect"><a class="" href="#" data-toggle="tab" data-target="#tab8">Leave a note to CEO</a></li>
@@ -239,11 +239,9 @@
                 <a href="#" data-toggle="modal" data-target="#contactModal" class="tab-modal-butt wave-effect">Ask a question</a>
               </div>
             </div>
-            <div id="tab5" class="tab-pane fade">
+            <!--<div id="tab5" class="tab-pane fade">
               <div class="section-head tab-content__head"><span>Security</span></div>
              <div class="tab-content__top">
-                <!-- <a href="skypeto:NOC.GMSU" data-hover="Skype: NOC.GMSU">Skype: NOC.GMSU</a>
-                <a href="tel:+41415446206" data-hover="Tel.: +41 41 544 62 06">Tel.: +41 41 544 62 06</a>  -->
                 <a href="mailto:security@gms-worldwide.com" data-hover="security@gms-worldwide.com">security@gms-worldwide.com</a>
               </div> 
               <div class="send-to">
@@ -252,7 +250,7 @@
               <div class="text-center">
                 <a href="#" data-toggle="modal" data-target="#contactSecurity" class="tab-modal-butt wave-effect">Ask a question</a>
               </div>
-            </div>
+            </div>-->
             <div id="tab6" class="tab-pane fade">
               <div class="section-head tab-content__head"><span>Commercial offers</span></div>
              <div class="tab-content__top">
@@ -415,7 +413,7 @@
           </ul>
         </div>
         <div class="col-xs-3">
-          <div class="foot-head">  СONTACT US</div>
+          <div class="foot-head foot-head-a" data-toggle="modal" data-target="#contactUs">  СONTACT US</div>
           <ul class="foot-nav">
             <li><a href="mailto:info@gms-worldwide.com" data-hover="Email: info@gms-worldwide.com">Email: info@gms-worldwide.com</a></li>
             <li><a href="tel:+41415446200" data-hover="Tel.: +41 41 544 6200">Tel.: +41 41 544 6200</a></li>
@@ -475,15 +473,15 @@
               <div class="form-field">
                 <div class="rad-box">
                   <label class="rad-head">Already our client? <sup>*</sup></label>
-                  <label class="rad-label"><input type="radio" data-rad="yes" name="radio27">Yes</label>
+                  <label class="rad-label "><input type="radio" data-rad="yes" name="radio27" >Yes</label>
                   <label class="rad-label "><input type="radio" data-rad="no" name="radio27" >No</label>
                 </div>
               </div>
               <div class="form-field select-field visible">
                   <!-- <label  class="rad-head">Send to:</label> -->
                   <div class="select">
-                    <select class="selectpicker" name="sel">
-                      <option value="Send to:" selected disabled>Ask:</option>
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
                       <option value="Sales">Sales</option>
                       <option value="PR">PR</option>
                       <option value="HR">HR</option>
@@ -507,6 +505,12 @@
                 <div class="input-anim">
                   <textarea maxlength="2000" id="cont60" title="fill in this field" class="input-field" required></textarea>
                   <label for="cont60">MESSAGE     <sup>*</sup></label>
+                </div>
+              </div>
+              <div class="check-field">
+                <div class="check">
+                  <input type="checkbox"  id="check22">
+                  <label for="check22">You are allowed to use my notes in all marketing materials of GMS.</label>
                 </div>
               </div>
               <div class="file-field clearfix">
@@ -660,8 +664,8 @@
               <div class="form-field select-field visible">
                   <!-- <label  class="rad-head">Send to:</label> -->
                   <div class="select">
-                    <select class="selectpicker" name="sel">
-                      <option value="Send to:" selected disabled>Ask:</option>
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
                       <option value="Sales">Sales</option>
                       <option value="PR">PR</option>
                       <option value="HR">HR</option>
@@ -758,8 +762,8 @@
               <div class="form-field select-field visible">
                   <!-- <label  class="rad-head">Send to:</label> -->
                   <div class="select">
-                    <select class="selectpicker" name="sel">
-                      <option value="Send to:" selected disabled>Ask:</option>
+                    <select class="selectpicker" name="sel" required>
+                      <option value="" selected disabled>Ask:</option>
                       <option value="Sales">Sales</option>
                       <option value="PR">PR</option>
                       <option value="HR">HR</option>
@@ -1043,6 +1047,12 @@
                   <label for="ceo7">MESSAGE     <sup>*</sup></label>
                 </div>
               </div>
+              <div class="check-field">
+                <div class="check">
+                  <input type="checkbox"  id="check33">
+                  <label for="check33">You are allowed to use my notes in all marketing materials of GMS.</label>
+                </div>
+              </div>
               <div class="file-field clearfix">
                 <div class="file">
                   <span class="news-window_close remove-file js_remove_file"></span>
@@ -1077,7 +1087,7 @@
           <div class="modal-heading">Leave feedback</div>
           <div class="modal-form">
            
-              <div class="form-head">To leave feedback, fill in the following form. Your opinion is very important to us!</div>
+              <div class="form-head">To leave feedback, fill in the following form<br> Your opinion is very important to us!</div>
               <div class="form-field">
                 <div class="rad-box select-field">
                   <!-- <label class="rad-head">Topic</label> -->
@@ -1128,8 +1138,8 @@
                   </div>
                   <div class="form-field select-field visible">
                       <div class="select">
-                        <select class="selectpicker" name="sel">
-                          <option value="Send to:" selected disabled>Send to:</option>
+                        <select class="selectpicker" name="sel" required>
+                          <option value="" selected disabled>Send to:</option>
                           <option value="Sales">Sales</option>
                           <option value="PR">PR</option>
                           <option value="HR">HR</option>
@@ -1153,6 +1163,12 @@
                     <div class="input-anim">
                       <textarea maxlength="2000" title="fill in this field"id="feed7" class="input-field" required></textarea>
                       <label for="feed7">MESSAGE     <sup>*</sup></label>
+                    </div>
+                  </div>
+                  <div class="check-field">
+                    <div class="check">
+                      <input type="checkbox"  id="check23">
+                      <label for="check23">You are allowed to use my notes in all marketing materials of GMS.</label>
                     </div>
                   </div>
                   <div class="file-field clearfix">
@@ -1215,8 +1231,8 @@
                 <div class="form-field select-field select-other visible">
                     <!-- <label  class="rad-head">Send to:</label> -->
                     <div class="select">
-                      <select class="selectpicker" name="sel">
-                        <option value="Send to:" selected disabled>Evaluate:</option>
+                      <select class="selectpicker" name="sel" required>
+                        <option value="" selected disabled>Evaluate:</option>
                         <option value="Company">Company</option>
                         <option value="Sales">Sales</option>
                         <option value="PR">PR</option>
@@ -1242,6 +1258,12 @@
                   <div class="input-anim">
                     <input type="text" id="feed52" title="fill in this field" class="input-field" required>
                     <label for="feed52">COUNTRY  <sup>*</sup></label>
+                  </div>
+                </div>
+                <div class="check-field">
+                  <div class="check">
+                    <input type="checkbox"  id="check24">
+                    <label for="check24">You are allowed to use my notes in all marketing materials of GMS.</label>
                   </div>
                 </div>
                 <div class="rait-field">
